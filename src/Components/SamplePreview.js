@@ -1,13 +1,11 @@
 import React from 'react';
 import {fieldCd} from '../constants/typeCodes'
 function ResumePreview(props){
-    // props.contact ??
-    // {FNAM:"SUShant"}
-    // console.log('Resume Preview');
+
     const ContactKeyToVal=(key, valToAppend)=>{
-        // FNAM , " "
+
         if(props.ContactSection){
-          return props.ContactSection[key] ? props.ContactSection[key] + (valToAppend ? valToAppend : '') : ''; //Sushant 
+          return props.ContactSection[key] ? props.ContactSection[key] + (valToAppend ? valToAppend : '') : ''; 
         }
         return '';
     }
