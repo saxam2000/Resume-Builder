@@ -3,6 +3,7 @@ import {useEffect,useState} from "react";
 import TextField from "@mui/material/TextField";
 import { fieldCd } from "../constants/typeCodes";
 import {connect} from "react-redux"
+import SamplePreview from "./SamplePreview"
 
 
 function Education(props) {
@@ -26,14 +27,17 @@ function Education(props) {
     return (
         <div>
             <h1>this is Education Section </h1>
+<div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
+  
 
             <div
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-start",
+          justifyContent: "center",
           alignItems: "flex-start",
-          height: "50%",
+          height: "70vh",
+          width:"43vw"
         }}
         className="EducationHtmlForm"
       >
@@ -43,6 +47,7 @@ function Education(props) {
             flexDirection: "column",
             margin: "0 0 0 1rem",
             alignItems: "flex-start",
+            width:"41vw"
           }}
           className="collegeName"
         >
@@ -56,7 +61,7 @@ function Education(props) {
             onChange={(e) => onChange(e)}
             sx={{
               height: "5ch",
-              width: "30rem",
+              width: "92%",
               size: "small",
             }}
             size="small"
@@ -68,7 +73,7 @@ function Education(props) {
             display: "flex",
             flexWrap:"",
             flexDirection: "column",
-            margin: "3px 0 3px 1rem",
+            margin: "3% 0 3% 3%",
             alignItems: "flex-start",
           }}
           className="DegreeAndCGPA"
@@ -82,7 +87,7 @@ function Education(props) {
               id="outlined-basic"
               value={getValue(fieldCd.Degree)}
               sx={{
-                width: "15rem",
+                width: "19vw",
                 margin: "1px 1rem 0 0",
               }}
               name={fieldCd.Degree}
@@ -97,7 +102,7 @@ function Education(props) {
               name={fieldCd.GraduationCGPA}
               onChange={(e) => onChange(e)}
               sx={{
-                width: "14rem",
+                width: "17vw",
                 // margin:"0 1rem 0 0"
               }}
               label="GraduationCGPA"
@@ -110,10 +115,10 @@ function Education(props) {
             display: "flex",
             flexWrap:"",
             flexDirection: "column",
-            margin: "3px 0 3px 1rem",
+            margin: "3% 0 3% 3%",
             alignItems: "flex-start",
           }}
-          className="nameInput"
+          className="graduationYearAndDate"
         >
 
           <div style={{display:"flex",flexDirection:"row",flexWrap:"nowrap"}} className="fnameAndLname">
@@ -122,7 +127,7 @@ function Education(props) {
               id="outlined-basic"
               value={getValue(fieldCd.GraduationYear)}
               sx={{
-                width: "15rem",
+                width: "19vw",
                 margin: "0 1rem 0 0",
               }}
               name={fieldCd.GraduationYear}
@@ -137,7 +142,7 @@ function Education(props) {
               name={fieldCd.GraduationDate}
               onChange={(e) => onChange(e)}
               sx={{
-                width: "14rem",
+                width: "17vw",
                 // margin:"0 1rem 0 0"
               }}
               label="GraduationDate"
@@ -150,10 +155,10 @@ function Education(props) {
             display: "flex",
             flexWrap:"",
             flexDirection: "column",
-            margin: "3px 0 3px 1rem",
+            margin: "3% 0 3% 3%",
             alignItems: "flex-start",
           }}
-          className="nameInput"
+          className="CollegeCityAndCollegeBoard"
         >
 
           <div style={{display:"flex",flexDirection:"row",flexWrap:"nowrap"}} className="fnameAndLname">
@@ -162,7 +167,7 @@ function Education(props) {
               id="outlined-basic"
               value={getValue(fieldCd.CollegeCity)}
               sx={{
-                width: "15rem",
+                width: "19vw",
                 margin: "0 1rem 0 0",
               }}
               name={fieldCd.CollegeCity}
@@ -177,7 +182,7 @@ function Education(props) {
               name={fieldCd.CollegeBoard}
               onChange={(e) => onChange(e)}
               sx={{
-                width: "14rem",
+                width: "17vw",
                 // margin:"0 1rem 0 0"
               }}
               label="CollegeBoard"
@@ -187,7 +192,9 @@ function Education(props) {
         </div>
 
           </div>
+          <SamplePreview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></SamplePreview>
 
+          </div>
         </div>
     )
 }

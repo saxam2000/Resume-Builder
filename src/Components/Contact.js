@@ -4,7 +4,8 @@ import TextField from "@mui/material/TextField";
 import { fieldCd } from "../constants/typeCodes";
 import { useState, useEffect } from "react";
 import {connect} from "react-redux"
-import{useHistory} from "react-router-dom"
+import{useHistory} from "react-router-dom";
+import SamplePreview from "./SamplePreview"
 
 function Contact(props) {
     let history = useHistory();
@@ -43,11 +44,14 @@ function Contact(props) {
       <h1>this is Contact</h1>
       <button onClick={()=>{console.log("clicked")
     history.push("/education")}}> go to education</button>
+    <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+
+    
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "flex-start",
+          justifyContent: "center",
           alignItems: "flex-start",
           height: "50%",
         }}
@@ -261,6 +265,9 @@ function Contact(props) {
               variant="outlined"
             />
           </div>
+      </div>
+      <SamplePreview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></SamplePreview>
+
       </div>
     </div>
   );

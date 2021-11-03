@@ -19,7 +19,7 @@ function EducationSection(state = initialState, action) {
             return {...state,[key]:val};
         default:return state;
     }
-  return state;
+
 }
 
 export default EducationSection;
