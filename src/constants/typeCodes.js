@@ -22,12 +22,16 @@ export const fieldCd = {
     GraduationYear: "GRYR",
     GraduationDate: "GRDT",
     HomePhone: "HPHN",
+
+
     JobCity: "JCIT",
     JobDescription: "JDES",
     JobEndDate: "EDDT",
     JobStartDate: "JSTD",
     JobState: "JSTA",
     JobTitle: "JTIT",
+    CompanyName:"CPNAME",
+
     CollegeName:"CLG",
     CollegeCity:"CCITY",
     CollegeBoard:"CBOARD",
@@ -43,7 +47,11 @@ export const fieldCd = {
     IsEmailHidden: "EHID",
     SchoolCountry: "SCNT",
     JobCountry: "JCNT",
-    Country: "CNTY"
+    Country: "CNTY",
+    linkedIn:"LKIN",
+    GitHub:"GTHB",
+    Website:"WBST",
+    Twitter:"TWTR"
     
 };
 

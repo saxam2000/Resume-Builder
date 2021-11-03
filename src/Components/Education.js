@@ -4,6 +4,7 @@ import TextField from "@mui/material/TextField";
 import { fieldCd } from "../constants/typeCodes";
 import {connect} from "react-redux"
 import SamplePreview from "./SamplePreview"
+import Preview from "./Preview"
 
 
 function Education(props) {
@@ -27,7 +28,7 @@ function Education(props) {
     return (
         <div>
             <h1>this is Education Section </h1>
-<div style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center"}}>
+<div style={{display:"flex",flexDirection:"row",justifyContent:"space-around",alignItems:"center"}}>
   
 
             <div
@@ -192,7 +193,8 @@ function Education(props) {
         </div>
 
           </div>
-          <SamplePreview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></SamplePreview>
+          {/* <SamplePreview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></SamplePreview> */}
+          <Preview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></Preview>
 
           </div>
         </div>

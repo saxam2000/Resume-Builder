@@ -10,6 +10,8 @@ const initialState = {
     CNTY:"",
     STRT:"",
     STAT:"",
+    LKIN:"",
+    GTHB:"",
 }
 
 

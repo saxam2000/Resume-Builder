@@ -44,7 +44,7 @@ function Contact(props) {
       <h1>this is Contact</h1>
       <button onClick={()=>{console.log("clicked")
     history.push("/education")}}> go to education</button>
-    <div style={{display:"flex",flexDirection:"row",justifyContent:"space-between"}}>
+    <div style={{display:"flex",flexDirection:"row",justifyContent:"space-around"}}>
 
     
       <div
@@ -202,7 +202,7 @@ function Contact(props) {
                 width: "14rem",
                 marginBottom: "2px",
 
-                margin: "0 0rem 0 0",
+                margin: "5px 0rem 0 0",
               }}
               onChange={(e) =>onChange(e)}
               label="State"
@@ -232,7 +232,7 @@ function Contact(props) {
                 width: "14rem",
                 marginBottom: "2px",
 
-                margin: "0 0rem 0 0",
+                margin: "5px 0rem 0 0",
               }}
               value={getValue(fieldCd.ZipCode)}
               name={fieldCd.ZipCode}
@@ -242,6 +242,70 @@ function Contact(props) {
             />
           </div>
           
+        <div className="linkedinAndGithub">
+            <TextField
+              size="small"
+              id="outlined-basic"
+              value={getValue(fieldCd.linkedIn)}
+              name={fieldCd.linkedIn}
+              sx={{
+                width: "15rem",
+                marginBottom: "2px",
+
+                margin: "0 1rem 0 0",
+              }}
+              onChange={(e) => onChange(e)}
+              label="linkedIn"
+              variant="outlined"
+            />
+            <TextField
+              size="small"
+              id="outlined-basic"
+              sx={{
+                width: "14rem",
+                marginBottom: "2px",
+
+                margin: "5px 0rem 0 0",
+              }}
+              value={getValue(fieldCd.GitHub)}
+              name={fieldCd.GitHub}
+              onChange={(e) => onChange(e)}
+              label="GitHub"
+              variant="outlined"
+            />
+          </div>
+          <div className="WebsiteAndTwitter">
+            <TextField
+              size="small"
+              id="outlined-basic"
+              value={getValue(fieldCd.Website)}
+              name={fieldCd.Website}
+              sx={{
+                width: "15rem",
+                marginBottom: "2px",
+
+                margin: "0 1rem 0 0",
+              }}
+              onChange={(e) => onChange(e)}
+              label="Website"
+              variant="outlined"
+            />
+            <TextField
+              size="small"
+              id="outlined-basic"
+              sx={{
+                width: "14rem",
+                marginBottom: "2px",
+
+                margin: "5px 0rem 0 0",
+              }}
+              value={getValue(fieldCd.Twitter)}
+              name={fieldCd.Twitter}
+              onChange={(e) => onChange(e)}
+              label="Twitter"
+              variant="outlined"
+            />
+          </div>
         </div>
         <div
             style={{
@@ -265,6 +329,7 @@ function Contact(props) {
               variant="outlined"
             />
           </div>
+          
       </div>
       <SamplePreview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></SamplePreview>
 

@@ -28,7 +28,7 @@ function Preview(props) {
                 <div className="imgbx">
                     <img src="images/Pierre-Person.jpg" alt=""/>
                 </div>
-                <h2>{ContactKeyToVal(fieldCd.FirstName,' ')  + ContactKeyToVal(fieldCd.LastName)}<br/><span>Web Developer</span></h2>
+                <h2>Pierre Person<br/><span>Web Developer</span></h2>
             </div>
 
             <div className="contactinfo">
@@ -36,11 +36,11 @@ function Preview(props) {
                 <ul>
                     <li>
                         <span className="icon"><i className="fa fa-phone" aria-hidden="true"></i></span>
-                        <span className="text">+91{ContactKeyToVal(fieldCd.Phone) }</span>
+                        <span className="text">+919876543210</span>
                     </li>
                     <li>
                         <span className="icon"><i className="fa fa-envelope-o" aria-hidden="true"></i></span>
-                        <span className="text">{ContactKeyToVal(fieldCd.Email ) }</span>
+                        <span className="text">pierre@gmail.com</span>
                     </li>
                     <li>
                         <span className="icon"><i className="fa fa-globe" aria-hidden="true"></i></span>
@@ -48,11 +48,11 @@ function Preview(props) {
                     </li>
                     <li>
                         <span className="icon"><i className="fa fa-linkedin" aria-hidden="true"></i></span>
-                        <span className="text">{ContactKeyToVal(fieldCd.linkedIn)}</span>
+                        <span className="text">www.linked.in</span>
                     </li>
                     <li>
                         <span className="icon"><i className="fa fa-map-marker" aria-hidden="true"></i></span>
-                        <span className="text">{ContactKeyToVal(fieldCd.City,', ') + ContactKeyToVal(fieldCd.State,', ') +  ContactKeyToVal(fieldCd.Country,', ') + ContactKeyToVal(fieldCd.ZipCode,', ')}</span>
+                        <span className="text">city-state-country</span>
                     </li>
                 </ul>
             </div>
