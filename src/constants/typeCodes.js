@@ -22,6 +22,7 @@ export const fieldCd = {
     GraduationYear: "GRYR",
     GraduationDate: "GRDT",
     HomePhone: "HPHN",
+    CollegeAdmission:"CAMN",
 
 
     JobCity: "JCIT",

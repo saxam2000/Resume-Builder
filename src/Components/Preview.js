@@ -11,9 +11,18 @@ function Preview(props) {
         return '';
     }
 
-    const EducationKeyToVal=(key, valToAppend)=>{
+    const getWorkHistory=(key,id, valToAppend)=>{
+        // console.log("came");
+        // console.log(props.WorkSection);
+        if(props.WorkSection){
+            // console.log(props.WorkSection);
+          return props.WorkSection.workHistories[id][key]?props.WorkSection.workHistories[id][key] + (valToAppend?valToAppend:'') :'';
+        }
+        return '';
+    }
+    const EducationKeyToVal=(key,id, valToAppend)=>{
         if(props.EducationSection){
-          return props.EducationSection[key]?props.EducationSection[key] + (valToAppend?valToAppend:'') :'';
+          return props.EducationSection.EducationHistories[id][key]?props.EducationSection.EducationHistories[id][key] + (valToAppend?valToAppend:'') :'';
         }
         return '';
     }
@@ -60,7 +69,15 @@ function Preview(props) {
             <div className="contactinfo education">
                 <h3 className="title">Education</h3>
                 <ul>
-                    <li>
+                    {props.EducationSection.EducationHistories.map(education=>{return(
+                        <li key={education.id}>
+                        <h5>{EducationKeyToVal(fieldCd.CollegeAdmission,education.id)}-{EducationKeyToVal(fieldCd.GraduationDate,education.id)}</h5>
+                        <h4>{EducationKeyToVal(fieldCd.Degree,education.id)}</h4>
+                        <h4>{EducationKeyToVal(fieldCd.CollegeName,education.id)}</h4>
+                        <h4>{EducationKeyToVal(fieldCd.CollegeBoard,education.id)}</h4>
+                    </li>
+                    )})}
+                    {/* <li>
                         <h5>2010-2013</h5>
                         <h4>Master Degree in Computer Science</h4>
                         <h4>University Name</h4>
@@ -74,7 +91,7 @@ function Preview(props) {
                         <h5>1997-2007</h5>
                         <h4>Matriculation</h4>
                         <h4>University Name</h4>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
 
@@ -103,6 +120,8 @@ function Preview(props) {
             </div>
         </div>
         <div className="right_Side">
+
+
             <div className="about">
                 <h2 className="title2">Profile</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis sed corrupti quia eveniet in odio
@@ -111,42 +130,23 @@ function Preview(props) {
             </div>
             <div className="about">
                 <h2 className="title2">Experience</h2>
-                <div className="box">
+                {props?.WorkSection?.workHistories.map(work =>
+                (
+                    
+<div className="box" key={work.id}>
                     <div className="year_company">
-                        <h5>2019-Present</h5>
-                        <h5>Company Name</h5>
+                        <h5>{getWorkHistory(fieldCd.JobStartDate,work.id)}-{getWorkHistory(fieldCd.JobEndDate,work.id)}</h5>
+                        <h5>{getWorkHistory(fieldCd.CompanyName,work.id)}</h5>
                     </div>
                     <div className="text">
-                        <h4>Senior UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad assumenda velit
-                            aperiam vitae unde maxime mollitia illum ea id deserunt optio praesentium culpa enim,
-                            asperiores adipisci quidem provident quas!</p>     
+                        <h4>{getWorkHistory(fieldCd.JobTitle,work.id)}</h4>
+                        <p>{getWorkHistory(fieldCd.JobDescription,work.id)}</p>     
                     </div>
                 </div>
-                <div className="box">
-                    <div className="year_company">
-                        <h5>2016-2019</h5>
-                        <h5>Company Name</h5>
-                    </div>
-                    <div className="text">
-                        <h4>UX/UI Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad assumenda velit
-                            aperiam vitae unde maxime mollitia illum ea id deserunt optio praesentium culpa enim,
-                            asperiores adipisci quidem provident quas!</p>     
-                    </div>
-                </div>
-                <div className="box">
-                    <div className="year_company">
-                        <h5>2014-2016</h5>
-                        <h5>Company Name</h5>
-                    </div>
-                    <div className="text">
-                        <h4>Junior UX Designer</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad assumenda velit
-                            aperiam vitae unde maxime mollitia illum ea id deserunt optio praesentium culpa enim,
-                            asperiores adipisci quidem provident quas!</p>     
-                    </div>
-                </div>
+                )
+            )}
+
+                
             </div>
 
             <div className="about skills">

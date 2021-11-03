@@ -5,33 +5,227 @@ import { fieldCd } from "../constants/typeCodes";
 import {connect} from "react-redux"
 import SamplePreview from "./SamplePreview"
 import Preview from "./Preview"
+import { useHistory } from 'react-router';
 
 
 function Education(props) {
-    const[Education,setEducation]=useState(props.EducationSection);
-    console.log(props);
-    const onChange=(e)=>{
-        let key=e.target.name;
-        let val=e.target.value;
-        setEducation({...Education,[key]:val});
-        props.updateKey(key,val);
+  const history=useHistory();
+    const[EducationHistory,setEducationHistory]=useState(props.EducationSection);
 
-    }
-    const getValue=(key)=>{
-        // if(Education && Education[key]){
-        //     return Education[key]
-        //   }
-        //   return "";
-        return Education[key];
-    }
+    console.log(props);
+
+
+const onChange = (e,id) => {
+    let key = e.target.name;
+    let val = e.target.value;
+    let newEducationHistoryArr=[...EducationHistory.EducationHistories];
+    newEducationHistoryArr[id]={...newEducationHistoryArr[id],[key]:val}
+    // let newEducationHistoryObj={...EducationHistory}
+    // newEducationHistoryObj[EducationHistories]:newEducationHistoryArr;
+    setEducationHistory({...EducationHistory,EducationHistories: newEducationHistoryArr} );
+    // setEducationHistory({ ...EducationHistory,[key]:[val]});
+    props.updateKey(key, val,id);
+  };
+  const getValue = (key,id) => {
+    // let id=1;
+    // console.log(id,key,EducationHistory.EducationHistories);
+    // return "abc";
+    // return props.EducationSection.EducationHistories[id][key];
+    return EducationHistory.EducationHistories[id][key];
+  };
+  let EducationState = {
+    CLG: "",
+    DGRE: "",
+    GRYR: "",
+    GRDT: "",
+    GRCG: "",
+    CBOARD: "",
+    CCITY: "",
+  };
+
+  const  addEducation=async()=>{
+    console.log("button");
+    setEducationHistory({...EducationHistory,EducationHistories:[...EducationHistory.EducationHistories,{id:EducationHistory.EducationHistories.length,...EducationState}]});
+    await props.addEducation();
+  }
     let labelCss = { fontSize: "1rem", fontWeight: "bold", margin: "5px" };
     return (
         <div>
             <h1>this is Education Section </h1>
-<div style={{display:"flex",flexDirection:"row",justifyContent:"space-around",alignItems:"center"}}>
-  
+            <button onClick={()=>history.push("/workhistory")}>go to Worksection</button>
+<div style={{display:"flex",flexDirection:"row",justifyContent:"space-around",alignItems:"flex-start" }}>
+  <div className="EducationHistories" style={{display:"flex",flexDirection:"column" }}>
+{props.EducationSection.EducationHistories.map(education=>
+(
 
-            <div
+  <div key={education.id}
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    height: "58vh",
+    border:"2px solid black",
+    margin:"3px",
+    width:"43vw"
+  }}
+  className="EducationHtmlForm"
+>
+    <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      margin: "0 0 0 1rem",
+      alignItems: "flex-start",
+      width:"41vw"
+    }}
+    className="collegeName"
+  >
+    <label style={labelCss} htmlFor="College">
+      College Name :
+    </label>
+    <TextField
+      id="outlined-basic"
+      name={fieldCd.CollegeName}
+      value={getValue(fieldCd.CollegeName,education.id)}
+      onChange={(e) => onChange(e,education.id)}
+      sx={{
+        height: "5ch",
+        width: "92%",
+        size: "small",
+      }}
+      size="small"
+      variant="outlined"
+    />
+  </div>
+  <div
+    style={{
+      display: "flex",
+      flexWrap:"",
+      flexDirection: "column",
+      margin: "3% 0 3% 3%",
+      alignItems: "flex-start",
+    }}
+    className="DegreeAndCGPA"
+  >
+       <label style={labelCss} htmlFor="CollegeInfo">
+      College Info :
+    </label>
+    <div style={{display:"flex",flexDirection:"row",flexWrap:"nowrap"}} className="DegreeAndCGPA">
+      <TextField
+        size="small"
+        id="outlined-basic"
+        value={getValue(fieldCd.Degree,education.id)}
+        sx={{
+          width: "19vw",
+          margin: "1px 1rem 0 0",
+        }}
+        name={fieldCd.Degree}
+        onChange={(e) => onChange(e,education.id)}
+        label="Degree"
+        variant="outlined"
+      />
+      <TextField
+        size="small"
+        id="outlined-basic"
+        value={getValue(fieldCd.GraduationCGPA,education.id)}
+        name={fieldCd.GraduationCGPA}
+        onChange={(e) => onChange(e,education.id)}
+        sx={{
+          width: "17vw",
+          // margin:"0 1rem 0 0"
+        }}
+        label="GraduationCGPA"
+        variant="outlined"
+      />
+    </div>
+  </div>
+  <div
+    style={{
+      display: "flex",
+      flexWrap:"",
+      flexDirection: "column",
+      margin: "3% 0 3% 3%",
+      alignItems: "flex-start",
+    }}
+    className="graduationYearAndDate"
+  >
+
+    <div style={{display:"flex",flexDirection:"row",flexWrap:"nowrap"}} className="fnameAndLname">
+      <TextField
+        size="small"
+        id="outlined-basic"
+        value={getValue(fieldCd.CollegeAdmission,education.id)}
+        sx={{
+          width: "19vw",
+          margin: "0 1rem 0 0",
+        }}
+        name={fieldCd.CollegeAdmission}
+        onChange={(e) => onChange(e,education.id)}
+        label="Admission year"
+        variant="outlined"
+      />
+      <TextField
+        size="small"
+        id="outlined-basic"
+        value={getValue(fieldCd.GraduationDate,education.id)}
+        name={fieldCd.GraduationDate}
+        onChange={(e) => onChange(e,education.id)}
+        sx={{
+          width: "17vw",
+          // margin:"0 1rem 0 0"
+        }}
+        label="GraduationDate"
+        variant="outlined"
+      />
+    </div>
+  </div>
+  <div
+    style={{
+      display: "flex",
+      flexWrap:"",
+      flexDirection: "column",
+      margin: "3% 0 3% 3%",
+      alignItems: "flex-start",
+    }}
+    className="CollegeCityAndCollegeBoard"
+  >
+
+    <div style={{display:"flex",flexDirection:"row",flexWrap:"nowrap"}} className="fnameAndLname">
+      <TextField
+        size="small"
+        id="outlined-basic"
+        value={getValue(fieldCd.CollegeCity,education.id)}
+        sx={{
+          width: "19vw",
+          margin: "0 1rem 0 0",
+        }}
+        name={fieldCd.CollegeCity}
+        onChange={(e) => onChange(e,education.id)}
+        label="CollegeCity"
+        variant="outlined"
+      />
+      <TextField
+        size="small"
+        id="outlined-basic"
+        value={getValue(fieldCd.CollegeBoard,education.id)}
+        name={fieldCd.CollegeBoard}
+        onChange={(e) => onChange(e,education.id)}
+        sx={{
+          width: "17vw",
+          // margin:"0 1rem 0 0"
+        }}
+        label="CollegeBoard"
+        variant="outlined"
+      />
+    </div>
+  </div>
+
+    </div>
+))}
+<button onClick={()=>addEducation()}>addEducation</button>
+</div>
+            {/* <div
         style={{
           display: "flex",
           flexDirection: "column",
@@ -192,9 +386,9 @@ function Education(props) {
           </div>
         </div>
 
-          </div>
+          </div> */}
           {/* <SamplePreview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></SamplePreview> */}
-          <Preview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></Preview>
+          <Preview ContactSection={props.ContactSection} WorkSection={props.WorkSection} EducationSection={props.EducationSection}></Preview>
 
           </div>
         </div>
@@ -205,9 +399,11 @@ const mapStateToProps=(store)=>{
 }
 const mapDispatchToProps=(dispatch)=>{
     return {
-        updateKey:(key,val)=>{
+        updateKey:(key,val,id)=>{
             console.log("dispatch",key,val);
-            return dispatch({type:"UPDATEEDUCATIONKEY",payload:{key:key,val:val}})}
+            return dispatch({type:"UPDATEEDUCATIONKEY",payload:{key:key,val:val,id:id}})
+          },
+          addEducation:()=>dispatch({type:"ADDEDUCATION"}),
         
     }
 }

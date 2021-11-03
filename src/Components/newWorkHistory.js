@@ -12,58 +12,34 @@ import SamplePreview from "./SamplePreview";
 function WorkHistory(props) {
   let history = useHistory();
   const [WorkHistory, setWorkHistory] = useState(props.WorkSection);
-
-// setWorkHistory(props.WorkSection);
-// console.log(props.WorkSection.workHistories);
-// console.log(WorkHistory);
-// useEffect(() => {
-//   setWorkHistory(props.WorkSection);
-
-//   console.log(WorkHistory);
-// }, []);
-
+console.log(props.WorkSection.workHistories);
   const onChange = (e,id) => {
     let key = e.target.name;
     let val = e.target.value;
-    let newWorkHistoryArr=[...WorkHistory.workHistories];
-    newWorkHistoryArr[id]={...newWorkHistoryArr[id],[key]:val}
-    // let newWorkHistoryObj={...WorkHistory}
-    // newWorkHistoryObj[workHistories]:newWorkHistoryArr;
-    setWorkHistory({...WorkHistory,workHistories: newWorkHistoryArr} );
-    // setWorkHistory({ ...WorkHistory,[key]:[val]});
+    // let newWorkHistoryArr=[...WorkHistory.workHistories];
+    // newWorkHistoryArr[id]={...newWorkHistoryArr[id],[key]:val}
+    // setWorkHistory({ newWorkHistoryArr });
+    setWorkHistory({ ...WorkHistory,[key]:[val]});
     props.updateKey(key, val,id);
   };
   const getValue = (key,id) => {
-    // console.log(id,key,WorkHistory.workHistories);
-    // return "abc";
-    return props.WorkSection.workHistories[id][key];
-    // return WorkHistory.workHistories[id][key];
+    return WorkHistory.workHistories[id][key];
   };
 
 
-  let jobState={
-    JTIT:"",
-    JSTA:"",
-    JSTD:"",
-    EDDT:"",
-    JDES:"",
-    JCIT:"",
-    CPNAME:"",
-}
+
 
   let labelCss = { fontSize: "1rem", fontWeight: "bold", margin: "5px" };
 
 
-const  addjob=async()=>{
-  console.log("button");
-  await props.addwork();
-  setWorkHistory({...WorkHistory,workHistories:[...WorkHistory.workHistories,{id:WorkHistory.workHistories.length,...jobState}]});
+const  addjob=()=>{
+console.log("button");
+props.addwork();
 }
 
   return (
     <div>
         <h1>work Section</h1>
-        <button onClick={()=>history.push("/preview")}> go to preview page</button>
       <div
         style={{
           display: "flex",
@@ -73,7 +49,6 @@ const  addjob=async()=>{
       >
         <div
           style={{
-            margin:"3px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -185,7 +160,6 @@ const  addjob=async()=>{
    return (
      <div style={{border:"2px solid black",margin:"3px"}} key={work.id}>
        <h1>{work.id+1}</h1>
-
                  <div className="JobTitleAndCompanyName">
             <TextField
               size="small"
@@ -283,23 +257,6 @@ const  addjob=async()=>{
               variant="outlined"
             />
           </div>
-          <div className="JobDescription">
-       <TextField
-              size="small"
-              id="outlined-basic"
-              value={getValue(fieldCd.JobDescription,work.id)}
-              name={fieldCd.JobDescription}
-              sx={{
-                width: "30rem",
-                marginBottom: "2px",
-
-                margin: "3px 0 0 0",
-              }}
-              onChange={(e) => onChange(e,work.id)}
-              label="JobDescription"
-              variant="outlined"
-            />
-            </div>
      </div>
    )
  })
@@ -320,7 +277,7 @@ let mapStateToProps = (store) => {
 };
 let mapDispatchToProps = (dispatch) => {
     return {
-        updateKey:(key,val,id)=>dispatch({type:"UPDATEJOBKEY",payload:{key:key,val:val,id:id}}),
+        updateKey:(key,val,id)=>dispatch({type:"UPDATEKEYs",payload:{key:key,val:val,id:id}}),
         addwork:()=>dispatch({type:"ADDWORK"}),
     }
 };

@@ -3,6 +3,7 @@ import Contact from './Components/Contact';
 import Education from './Components/Education';
 import LandingPage from './Components/LandingPage';
 import Preview from "./Components/Preview"
+import SamplePreview from './Components/SamplePreview';
 import WorkHistory from './Components/WorkHistory';
 import './App.css';
 import { Provider } from 'react-redux';
@@ -21,7 +22,7 @@ function App() {
 <Route path="/" exact component={LandingPage}></Route>
 <Route path="/contact" exact component={Contact}></Route>
 <Route path="/education" exact component={Education}></Route>
-<Route exact path="/preview" component={Preview}></Route>
+<Route exact path="/preview" component={SamplePreview}></Route>
 <Route exact path="/workhistory" component={WorkHistory}></Route>
       {/* <Contact></Contact> */}
       </Provider>

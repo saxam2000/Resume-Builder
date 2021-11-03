@@ -16,7 +16,7 @@ const initialState = {
 
 
 function ContactSection(state=initialState,action){
-    console.log("contactSecttion");
+    // console.log("contactSecttion");
     switch(action.type){
         case "ADD_EDU":
             return state;
