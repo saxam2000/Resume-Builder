@@ -1,6 +1,18 @@
 import React from 'react'
 import "../html/css/templat1.css"
 import {fieldCd} from '../constants/typeCodes'
+import ReactDOM from 'react-dom';
+import { SocialIcon } from 'react-social-icons';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {fab, faTwitterSquare, faFacebook, faLinkedin, faGithub,faGlobe} from "@fortawesome/free-brands-svg-icons";
+
+
+library.add(fab, faTwitterSquare, faFacebook, faLinkedin, faGithub);
+// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+// import * as Icons from "@fortawesome/fontawesome-free-solid"
+// import {FontAwesomeIcon} from "FontAwesomeIcon"
 
 function Preview(props) {
     const ContactKeyToVal=(key, valToAppend)=>{
@@ -52,11 +64,16 @@ function Preview(props) {
                         <span className="text">{ContactKeyToVal(fieldCd.Email ) }</span>
                     </li>
                     <li>
+                    <span className="icon"><FontAwesomeIcon icon={faGithub} /></span>
                         <span className="icon"><i className="fa fa-globe" aria-hidden="true"></i></span>
                         <span className="text">www.mywebsite.com</span>
                     </li>
                     <li>
-                        <span className="icon"><i className="fa fa-linkedin" aria-hidden="true"></i></span>
+                        {/* <span className="icon"><FontAwesomeIcon icon="fa-brands fa-linkedin-in" /></span> */}
+                        <span className="icon"><FontAwesomeIcon icon={faLinkedin} /></span>
+
+                        {/* <span className="icon"style={{}}><SocialIcon url="https://linkedin.com/in/jaketrent" /></span> */}
+                        
                         <span className="text">{ContactKeyToVal(fieldCd.linkedIn)}</span>
                     </li>
                     <li>

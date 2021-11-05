@@ -1,5 +1,5 @@
 import React from "react";
-
+import Preview from "./Preview"
 
 
 import TextField from "@mui/material/TextField";
@@ -69,6 +69,7 @@ const  addjob=async()=>{
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
+          alignItems:"flex-start"
         }}
       >
         <div
@@ -300,6 +301,8 @@ const  addjob=async()=>{
               variant="outlined"
             />
             </div>
+
+
      </div>
    )
  })
@@ -311,6 +314,7 @@ const  addjob=async()=>{
 
 
         </div>
+        <Preview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></Preview>
       </div>
     </div>
   );

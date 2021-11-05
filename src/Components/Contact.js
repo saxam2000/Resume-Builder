@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import {connect} from "react-redux"
 import{useHistory} from "react-router-dom";
 import SamplePreview from "./SamplePreview"
+import Preview from "./Preview"
 
 function Contact(props) {
     let history = useHistory();
@@ -44,14 +45,17 @@ function Contact(props) {
       <h1>this is Contact</h1>
       <button onClick={()=>{console.log("clicked")
     history.push("/education")}}> go to education</button>
-    <div style={{display:"flex",flexDirection:"row",justifyContent:"space-around"}}>
+    <div style={{display:"flex",flexDirection:"row",
+     alignItems:"flex-start",
+    justifyContent:"space-between"}}>
 
     
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          width:"40%",
+          // justifyContent: "sp",
           alignItems: "flex-start",
           height: "50%",
         }}
@@ -61,6 +65,7 @@ function Contact(props) {
           style={{
             display: "flex",
             flexDirection: "column",
+            width:"100%",
             margin: "0 0 0 1rem",
             alignItems: "flex-start",
           }}
@@ -76,7 +81,7 @@ function Contact(props) {
             onChange={(e) => onChange(e)}
             sx={{
               height: "5ch",
-              width: "30rem",
+              width: "100%",
               size: "small",
             }}
             size="small"
@@ -87,6 +92,7 @@ function Contact(props) {
           style={{
             display: "flex",
             flexWrap:"",
+            width:"100%",
             flexDirection: "column",
             margin: "1px 0 1px 1rem",
             alignItems: "flex-start",
@@ -102,8 +108,8 @@ function Contact(props) {
               id="outlined-basic"
               value={getValue(fieldCd.FirstName)}
               sx={{
-                width: "15rem",
-                margin: "0 1rem 0 0",
+                width: "48%",
+                margin: "0 4% 0 0",
               }}
               name={fieldCd.FirstName}
               onChange={(e) => onChange(e)}
@@ -117,7 +123,7 @@ function Contact(props) {
               name={fieldCd.LastName}
               onChange={(e) => onChange(e)}
               sx={{
-                width: "14rem",
+                width: "48%",
                 // margin:"0 1rem 0 0"
               }}
               label="LastName"
@@ -129,7 +135,7 @@ function Contact(props) {
           style={{
             display: "flex",
             flexDirection: "column",
-            margin: "1rem",
+            margin: "2%",
             alignItems: "flex-start",
           }}
           className="AddressInput"
@@ -144,7 +150,7 @@ function Contact(props) {
             value={getValue(fieldCd.Address)}
             name={fieldCd.Address}
             sx={{
-              width: "30rem",
+              width: "100%",
               marginBottom: "2px",
             }}
             onChange={(e) => onChange(e)}
@@ -157,7 +163,7 @@ function Contact(props) {
             value={getValue(fieldCd.Street)}
             name={fieldCd.Street}
             sx={{
-              width: "30rem",
+              width: "100%",
               marginBottom: "2px",
             }}
             onChange={(e) => onChange(e)}
@@ -170,7 +176,7 @@ function Contact(props) {
             value={getValue(fieldCd.Phone)}
             name={fieldCd.Phone}
             sx={{
-              width: "30rem",
+              width: "100%",
               marginBottom: "2px",
             }}
             onChange={(e) => onChange(e)}
@@ -184,10 +190,11 @@ function Contact(props) {
               value={getValue(fieldCd.Country)}
               name={fieldCd.Country}
               sx={{
-                width: "15rem",
-                marginBottom: "2px",
+                width: "48%",
+                marginBottom: "2%",
+                // marginRight: "4%",
 
-                margin: "0 1rem 0 0",
+                margin: "0 4% 0 0",
               }}
               onChange={(e) => onChange(e)}
               label="Country"
@@ -199,10 +206,9 @@ function Contact(props) {
               value={getValue(fieldCd.State)}
               name={fieldCd.State}
               sx={{
-                width: "14rem",
-                marginBottom: "2px",
+                width: "48%",                marginBottom: "2px",
 
-                margin: "5px 0rem 0 0",
+                margin: "0 0 0 0",
               }}
               onChange={(e) =>onChange(e)}
               label="State"
@@ -216,10 +222,11 @@ function Contact(props) {
               value={getValue(fieldCd.City)}
               name={fieldCd.City}
               sx={{
-                width: "15rem",
-                marginBottom: "2px",
+                width: "48%",
+                marginBottom: "2%",
+                // marginRight: "4%",
 
-                margin: "0 1rem 0 0",
+                margin: "0 4% 0 0",
               }}
               onChange={(e) => onChange(e)}
               label="City"
@@ -229,10 +236,9 @@ function Contact(props) {
               size="small"
               id="outlined-basic"
               sx={{
-                width: "14rem",
-                marginBottom: "2px",
+                width: "48%",                marginBottom: "2px",
 
-                margin: "5px 0rem 0 0",
+                margin: "0 0 0 0",
               }}
               value={getValue(fieldCd.ZipCode)}
               name={fieldCd.ZipCode}
@@ -249,10 +255,11 @@ function Contact(props) {
               value={getValue(fieldCd.linkedIn)}
               name={fieldCd.linkedIn}
               sx={{
-                width: "15rem",
-                marginBottom: "2px",
+                width: "48%",
+                marginBottom: "2%",
+                // marginRight: "4%",
 
-                margin: "0 1rem 0 0",
+                margin: "0 4% 0 0",
               }}
               onChange={(e) => onChange(e)}
               label="linkedIn"
@@ -262,10 +269,9 @@ function Contact(props) {
               size="small"
               id="outlined-basic"
               sx={{
-                width: "14rem",
-                marginBottom: "2px",
+                width: "48%",                marginBottom: "2px",
 
-                margin: "5px 0rem 0 0",
+                margin: "0 0 0 0",
               }}
               value={getValue(fieldCd.GitHub)}
               name={fieldCd.GitHub}
@@ -281,10 +287,11 @@ function Contact(props) {
               value={getValue(fieldCd.Website)}
               name={fieldCd.Website}
               sx={{
-                width: "15rem",
-                marginBottom: "2px",
+                width: "48%",
+                marginBottom: "2%",
+                // marginRight: "4%",
 
-                margin: "0 1rem 0 0",
+                margin: "0 4% 0 0",
               }}
               onChange={(e) => onChange(e)}
               label="Website"
@@ -294,10 +301,9 @@ function Contact(props) {
               size="small"
               id="outlined-basic"
               sx={{
-                width: "14rem",
-                marginBottom: "2px",
+                width: "48%",                marginBottom: "2px",
 
-                margin: "5px 0rem 0 0",
+                margin: "0 0 0 0",
               }}
               value={getValue(fieldCd.Twitter)}
               name={fieldCd.Twitter}
@@ -307,31 +313,31 @@ function Contact(props) {
             />
           </div>
         </div>
-        <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              margin: "0 0 0 1rem",
-              alignItems: "flex-start",
-            }}
-            className="ProfessionInput"
-          >
-            <label style={ labelCss } htmlFor="Profession">
-              Profession
-            </label>
-            <TextField
-              size="small"
-              id="outlined-basic"
-              name={fieldCd.Profession}
-              value={getValue(fieldCd.Profession)}
-              onChange={(e) => onChange(e)}
-              label="Profession"
-              variant="outlined"
-            />
-          </div>
+          {/* <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                margin: "0 0 0 1rem",
+                alignItems: "flex-start",
+              }}
+              className="ProfessionInput"
+            >
+              <label style={ labelCss } htmlFor="Profession">
+                Profession
+              </label>
+              <TextField
+                size="small"
+                id="outlined-basic"
+                name={fieldCd.Profession}
+                value={getValue(fieldCd.Profession)}
+                onChange={(e) => onChange(e)}
+                label="Profession"
+                variant="outlined"
+              />
+            </div> */}
           
       </div>
-      <SamplePreview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></SamplePreview>
+      <Preview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></Preview>
 
       </div>
     </div>
