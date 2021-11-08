@@ -5,6 +5,7 @@ import LandingPage from './Components/LandingPage';
 import Preview from "./Components/Preview"
 import SamplePreview from './Components/SamplePreview';
 import WorkHistory from './Components/WorkHistory';
+import NavBar from './Components/NavBar';
 import './App.css';
 import { Provider } from 'react-redux';
 import {
@@ -15,6 +16,7 @@ import Store from "./Store"
 function App() {
   return (
     <div className="App">
+      <NavBar></NavBar>
       <Router>
 <Switch>
 

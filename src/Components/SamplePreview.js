@@ -1,5 +1,5 @@
 import React from 'react'
-import "../html/css/templat1.css"
+// import "../html/css/templat1.css"
 import {fieldCd} from '../constants/typeCodes'
 import { connect } from 'react-redux';
 

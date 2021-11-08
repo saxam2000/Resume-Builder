@@ -47,14 +47,14 @@ function Contact(props) {
     history.push("/education")}}> go to education</button>
     <div style={{display:"flex",flexDirection:"row",
      alignItems:"flex-start",
-    justifyContent:"space-between"}}>
+    justifyContent:"space-around"}}>
 
     
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          width:"40%",
+          width:"30%",
           // justifyContent: "sp",
           alignItems: "flex-start",
           height: "50%",

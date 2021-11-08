@@ -314,7 +314,7 @@ const  addjob=async()=>{
 
 
         </div>
-        <Preview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></Preview>
+        <Preview ContactSection={props.ContactSection} WorkSection={props.WorkSection} EducationSection={props.EducationSection}></Preview>
       </div>
     </div>
   );
