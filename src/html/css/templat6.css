@@ -3,7 +3,7 @@
     -moz-box-sizing: border-box;
   }
 
-.outer-container{
+.skin6.outer-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,17 +14,17 @@
     font-size: 14px;
 }
 
-.container{
+.skin6.container{
     position: relative;
     width: 100%;
-    height: 320mm;
+    min-height: 390mm;
     max-width: 1000px;
     margin: 5px;
     background: #fff;
     box-shadow: 0 35px 55px rgba(0, 0, 0, 0.2);
 }
 
-.horizontalline{
+.skin6.horizontalline{
     display :block !important;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -39,14 +39,14 @@
     top: 3%;
 }
 
-.profiletext{
+.skin6.profiletext{
     padding: 0px;
     padding-bottom: 0px;
     padding-left: 3%;
     padding-top: 7%;
 }
 
-.profiletext .title7{
+.skin6.profiletext .title7{
     padding-top: 2%;
     padding-left: 3%;
     font-size: 3em;
@@ -59,15 +59,15 @@
     justify-content: center;
 }
 
-.profiletext .imgbx{
+.skin6.profiletext .imgbx{
     display: none;
 }
 
-.occupation{
+.skin6.occupation{
     display: none;
 }
 
-.about{
+.skin6.about{
     border-top: 4px dotted #640dccf7;
     border-bottom: 4px dotted #640dccf7;
     position: absolute;
@@ -81,25 +81,25 @@
     height: auto;
 }
 
-.about:last-child{
+.skin6.about:last-child{
     margin-bottom: 0;
 }
 
-.about .title3{
+.skin6.about .title3{
     display: none;
 }
 
-.contactinfo{
+.skin6.contactinfo{
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.contactinfo .title{
+.skin6.contactinfo .title{
     display: none;
 }
 
-.contactinfo ul{
+.skin6.contactinfo ul{
     position: relative;
     padding-left: 0%;
     margin-right: 0%;
@@ -107,7 +107,7 @@
     grid-template-columns: 1fr 1fr ; 
 }
 
-.contactinfo ul li{
+.skin6.contactinfo ul li{
     position: relative;
     list-style: none;
     margin-top: 1%;
@@ -115,20 +115,20 @@
     padding-right: 23%;
 }
 
-.contactinfo ul li .icon{
+.skin6.contactinfo ul li .icon{
     display: none;
 }
 
-.contactinfo ul li .text{
+.skin6.contactinfo ul li .text{
     display: flex;
     justify-content: flex-end;
 }
 
-.contactinfo ul li span{
+.skin6.contactinfo ul li span{
     font-weight: 300;
 }
 
-.education{
+.skin6.education{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -140,7 +140,7 @@
     height: auto;
 }
 
-.education .title4{
+.skin6.education .title4{
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
@@ -149,17 +149,17 @@
     font-size: 18px;
 }
 
-.education ul{
+.skin6.education ul{
     padding-left: 0%;
     margin-top: 1%;
 }
 
-.education li{
+.skin6.education li{
     margin-bottom: 2%;
     list-style: none;
 }
 
-.education h5{
+.skin6.education h5{
     float: right;
     font-weight: 530;
     font-size: 14px;
@@ -169,19 +169,19 @@
     padding-right: 2%;
 }
 
-.education h4:nth-child(2){
+.skin6.education h4:nth-child(2){
     font-weight: 600;
     margin-top: 0%;
     margin-bottom: 0px;
 }
 
-.education h4{
+.skin6.education h4{
     font-weight: 300;
     margin-top: 1%;
     margin-bottom: 0px;
 }
 
-.languag{
+.skin6.languag{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -193,7 +193,7 @@
     height: auto;
 }
 
-.languag .title8{
+.skin6.languag .title8{
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
@@ -201,13 +201,13 @@
     font-size: 18px;
 }
 
-.languag ul li{
+.skin6.languag ul li{
     position: relative;
     list-style: none;
     margin: 2px;
 }
 
-.languag .percent{
+.skin6.languag .percent{
     position: relative;
     width: 60%;
     height: 6px;
@@ -216,7 +216,7 @@
     margin-top:5px;
 } 
 
-.languag .percent div{
+.skin6.languag .percent div{
     position: relative;
     top: 0;
     left: 0;
@@ -224,7 +224,7 @@
     background: #640dccf7;
 }
 
-.Experience{
+.skin6.Experience{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -235,7 +235,7 @@
     height: auto;
 }
 
-.Experience .title2{
+.skin6.Experience .title2{
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0px;
@@ -243,7 +243,7 @@
     font-size: 18px;
 }
 
-.Experience .box{
+.skin6.Experience .box{
     display: flex;
     flex-direction: column;
     margin: 0px;
@@ -253,20 +253,20 @@
     padding-bottom: 1%;
 }
 
-.Experience .box .year_company{
+.skin6.Experience .box .year_company{
     min-width: 150px;
 }
 
-.Experience .box .year_company .year{
+.skin6.Experience .box .year_company .year{
     float: right;
 }
 
-.Experience .box .year_company .company{
+.skin6.Experience .box .year_company .company{
     font-weight: 300;
     color: rgba(0, 0, 0, 1);
 }
 
-.Experience .box .year_company h5{
+.skin6.Experience .box .year_company h5{
     text-transform: uppercase;
     font-weight: 530;
     font-size: 14px;
@@ -274,7 +274,7 @@
     margin-top: 1%;
 }
 
-.Experience .box .text h4{
+.skin6.Experience .box .text h4{
     text-transform: uppercase;
     font-weight: 540;
     color: rgba(0, 0, 0, 1);
@@ -283,13 +283,13 @@
     margin-bottom: 1%;
 }
 
-p{
+.skin6.p{
     color: #333;
     font-size: 15px;
     margin-top: 1%;
 }
 
-.Experience .box .text .description{
+.skin6.Experience .box .text .description{
     color: #333;
     padding-top: 0px;
     padding-left: 2%;
@@ -299,7 +299,7 @@ p{
     margin-bottom: 0%;
 }
 
-.DisplaySkillsList{
+.skin6.DisplaySkillsList{
     display: block !important;
     position: absolute;
     left: 1%;
@@ -311,7 +311,7 @@ p{
     height: auto;
 }
 
-.DisplaySkillsList .SkillsListTitle{
+.skin6.DisplaySkillsList .SkillsListTitle{
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0px;
@@ -319,13 +319,13 @@ p{
     padding-right: 2%;
 }
 
-.DisplaySkillsList ul{
+.skin6.DisplaySkillsList ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-left: 0%;
     margin-top: 0%;
 }
-.DisplaySkillsList ul li{
+.skin6.DisplaySkillsList ul li{
     margin-top: 0%;
     padding-left: 3%;
     padding-right: 3%;
@@ -333,7 +333,7 @@ p{
     margin-right: 2%;
 }
 
-.DisplaySkillsList ul li h4{
+.skin6.DisplaySkillsList ul li h4{
     font-weight: 400;
     margin-top: 0px;
     margin-bottom: 0%;
@@ -343,7 +343,7 @@ p{
     padding-right: 0%;
 }
 
-.interest{
+.skin6.interest{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -354,20 +354,20 @@ p{
     height: auto;
 }
 
-.interest .title6{
+.skin6.interest .title6{
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0px;
     font-size: 18px;
 }
 
-.interest ul{
+.skin6.interest ul{
     display: grid;
     grid-template-columns:  repeat(4,1fr);
     padding-left: 2%;
 }
 
-.interest ul li{
+.skin6.interest ul li{
     color: #333;
     font-weight: 500;
     margin: 2%;

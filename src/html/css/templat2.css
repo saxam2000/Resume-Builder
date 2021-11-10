@@ -3,7 +3,7 @@
     -moz-box-sizing: border-box;
   }
 
-.outer-container{
+.skin2.outer-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
     font-size: 14px; 
 }
 
-.container{
+.skin2.container{
     position: relative;
     width: 100%;
     max-width: 1000px;
@@ -24,7 +24,7 @@
     box-shadow: 0 35px 55px rgba(0, 0, 0, 0.2);
 }
 
-.profiletext{
+.skin2.profiletext{
     position: absolute;
     left: 1%;
     right: 70%;
@@ -36,7 +36,7 @@
     width: 50%;
 }
 
-.profiletext .title7{
+.skin2.profiletext .title7{
     padding-top: 10px;
     padding-left: 0px;
     font-size: 2.5em;
@@ -47,11 +47,11 @@
     line-height: 1.4em;
 }
 
-.profiletext .imgbx{
+.skin2.profiletext .imgbx{
     display: none;
 }
 
-.occupation{
+.skin2.occupation{
     margin-top: 0px;
     text-transform: uppercase;
     text-align: center;
@@ -67,7 +67,7 @@
     z-index: 1;
 }
 
-.horizontalline{
+.skin2.horizontalline{
     display :block !important;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -82,7 +82,7 @@
     top: 9%;
 }
 
-.about{
+.skin2.about{
     position: absolute;
     left: 35%;
     right: 1%;
@@ -94,11 +94,11 @@
     height: auto;
 }
 
-.about:last-child{
+.skin2.about:last-child{
     margin-bottom: 0;
 }
 
-.about .title3{
+.skin2.about .title3{
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0px;
@@ -106,7 +106,7 @@
     font-size: 18px;
 }
 
-.contactinfo{
+.skin2.contactinfo{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -119,7 +119,7 @@
     height: auto;
 }
 
-.title{
+.skin2.title{
     text-transform: uppercase;
     font-weight: 600;
     display: flex;
@@ -131,12 +131,12 @@
     padding-right: 2%;
 }
 
-.contactinfo ul{
+.skin2.contactinfo ul{
     position: relative;
     
 }
 
-.contactinfo ul li{
+.skin2.contactinfo ul li{
     position: relative;
     list-style: none;
     margin: 10px 0;
@@ -146,7 +146,7 @@
     padding-right: 23%;
 }
 
-.contactinfo ul li .icon{
+.skin2.contactinfo ul li .icon{
     display: inline-block;
     position: absolute;
     left: 88%;
@@ -156,16 +156,16 @@
     color: rgba(96, 145, 137, 0.822);
 }
 
-.contactinfo ul li .text{
+.skin2.contactinfo ul li .text{
     display: flex;
     justify-content: flex-end;
 }
 
-.contactinfo ul li span{
+.skin2.contactinfo ul li span{
     font-weight: 300;
 }
 
-.education{
+.skin2.education{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -178,7 +178,7 @@
     height: auto;
 }
 
-.education .title4{
+.skin2.education .title4{
     text-transform: uppercase;
     font-weight: 600;
     display: flex;
@@ -190,16 +190,16 @@
     padding-right: 2%;
 }
 
-.education ul{
+.skin2.education ul{
     padding-left: 10%;
 }
 
-.education li{
+.skin2.education li{
     margin-bottom: 25px;
     list-style: none;
 }
 
-.education h5{
+.skin2.education h5{
     display: flex;
     justify-content: end;
     font-weight: 600;
@@ -208,7 +208,7 @@
     margin-bottom: 0px;
 }
 
-.education h4:nth-child(2){
+.skin2.education h4:nth-child(2){
     display: flex;
     justify-content: end;
     font-weight: 700;
@@ -216,7 +216,7 @@
     margin-bottom: 0px;
 }
 
-.education h4{
+.skin2.education h4{
     display: flex;
     justify-content: end;
     font-weight: 300;
@@ -224,7 +224,7 @@
     margin-bottom: 0px;
 }
 
-.languag{
+.skin2.languag{
     position: absolute;
     left: 35%;
     right: 1%;
@@ -236,7 +236,7 @@
     height: auto;
 }
 
-.languag .title8{
+.skin2.languag .title8{
     text-transform: uppercase;
     border-bottom: 2px solid rgba(96, 145, 137, 0.822);
     font-weight: 600;
@@ -245,13 +245,13 @@
     font-size: 18px;
 }
 
-.languag ul li{
+.skin2.languag ul li{
     position: relative;
     list-style: none;
     margin: 2px;
 }
 
-.languag .percent{
+.skin2.languag .percent{
     position: relative;
     width: 70%;
     height: 6px;
@@ -260,7 +260,7 @@
     margin-top:5px;
 } 
 
-.languag .percent div{
+.skin2.languag .percent div{
     position: relative;
     top: 0;
     left: 0;
@@ -268,7 +268,7 @@
     background: rgba(96, 145, 137, 0.822);
 }
 
-.Experience{
+.skin2.Experience{
     position: absolute;
     left: 35%;
     right: 1%;
@@ -279,7 +279,7 @@
     height: auto;
 }
 
-.Experience .title2{
+.skin2.Experience .title2{
     border-bottom: 2px solid rgba(96, 145, 137, 0.822);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -288,7 +288,7 @@
     font-size: 18px;
 }
 
-.Experience .box{
+.skin2.Experience .box{
     display: flex;
     flex-direction: row;
     margin: 0px;
@@ -297,25 +297,25 @@
     padding-right: 10px;
 }
 
-.Experience .box .year_company{
+.skin2.Experience .box .year_company{
     min-width: 150px;
 }
 
-.Experience .box .year_company h5{
+.skin2.Experience .box .year_company h5{
     text-transform: uppercase;
     color: #848c90;
     font-weight: 600;
     font-size: 14px;
 }
 
-.Experience .box .text h4{
+.skin2.Experience .box .text h4{
     text-transform: uppercase;
     color: rgba(96, 145, 137, 0.822);
     font-size: 14px;
     margin: 30px;
 }
 
-p{
+.skin2.p{
     color: #333;
     padding-top: 10px;
     padding-left: 20px;
@@ -323,7 +323,7 @@ p{
     font-size: 15px;
 }
 
-.Experience .box .text .description{
+.skin2.Experience .box .text .description{
     color: #333;
     padding-top: 0px;
     padding-left: 20px;
@@ -331,7 +331,7 @@ p{
     font-size: 12px;
 }
 
-.DisplaySkillsPercentage{
+.skin2.DisplaySkillsPercentage{
     display: block !important;
     position: absolute;
     left: 1%;
@@ -344,7 +344,7 @@ p{
     height: auto;
 }
 
-.DisplaySkillsPercentage .SkillsPercentageTitle{
+.skin2.DisplaySkillsPercentage .SkillsPercentageTitle{
     border-bottom: 2px solid rgba(96, 145, 137, 0.822);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -355,7 +355,7 @@ p{
     padding-right: 2%;
 }
 
-.DisplaySkillsPercentage .box{
+.skin2.DisplaySkillsPercentage .box{
     position: relative;
     width: 100%;
     padding: 1px;
@@ -369,7 +369,7 @@ p{
     margin-bottom: 0px;
 }
 
-.DisplaySkillsPercentage .box h4{
+.skin2.DisplaySkillsPercentage .box h4{
     text-transform: uppercase;
     color: #848c99;
     font-weight: 500;
@@ -377,14 +377,14 @@ p{
     margin: 1px;
 }
 
-.DisplaySkillsPercentage .box .percent{
+.skin2.DisplaySkillsPercentage .box .percent{
     position: relative;
     width: 100%;
     height: 3px;
     background: #f0f0f0;
 }
 
-.DisplaySkillsPercentage .box .percent div{
+.skin2.DisplaySkillsPercentage .box .percent div{
     position: relative;
     top: 0;
     left: 0;
@@ -392,7 +392,7 @@ p{
     background: rgba(96, 145, 137, 0.822);
 }
 
-.interest{
+.skin2.interest{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -404,7 +404,7 @@ p{
     height: auto;
 }
 
-.interest .title6{
+.skin2.interest .title6{
     border-bottom: 2px solid rgba(96, 145, 137, 0.822);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -415,12 +415,12 @@ p{
     justify-content: flex-end;
 }
 
-.interest ul{
+.skin2.interest ul{
     display: grid;
     grid-template-columns:  1fr 1fr;
 }
 
-.interest ul li{
+.skin2.interest ul li{
     color: #333;
     font-weight: 500;
     margin: 10px;

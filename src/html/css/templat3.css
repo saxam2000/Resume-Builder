@@ -3,7 +3,7 @@
     -moz-box-sizing: border-box;
   }
 
-.outer-container{
+.skin3.outer-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,17 +14,18 @@
     font-size: 14px;
 }
 
-.container{
+.skin3.container{
     position: relative;
     width: 100%;
-    height: 320mm;
+    height: 370mm;
     max-width: 1000px;
+    min-height:1000px;
     margin: 5px;
     background: #fff;
     box-shadow: 0 35px 55px rgba(0, 0, 0, 0.2);
 }
 
-.profiletext{
+.skin3.profiletext{
     position: absolute;
     left: 4%;
     top: 3%;
@@ -34,7 +35,7 @@
     padding-bottom: 0px;
 }
 
-.profiletext .title7{
+.skin3.profiletext .title7{
     padding-top: 7%;
     padding-left: 0px;
     font-size: 2.5em;
@@ -45,15 +46,15 @@
     line-height: 1.4em;
 }
 
-.profiletext .imgbx{
+.skin3.profiletext .imgbx{
     display: none;
 }
 
-.occupation{
+.skin3.occupation{
     display: none;
 }
 
-.horizontalline{
+.skin3.horizontalline{
     display :block !important;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -68,7 +69,7 @@
     top: 8%;
 }
 
-.about{
+.skin3.about{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -80,11 +81,11 @@
     height: auto;
 }
 
-.about:last-child{
+.skin3.about:last-child{
     margin-bottom: 0;
 }
 
-.about .title3{
+.skin3.about .title3{
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0px;
@@ -92,7 +93,7 @@
     font-size: 18px;
 }
 
-.contactinfo{
+.skin3.contactinfo{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -105,18 +106,18 @@
     height: auto;
 }
 
-.title{
+.skin3.title{
     display: none;
 }
 
-.contactinfo ul{
+.skin3.contactinfo ul{
     position: relative;
     display: flex;
     flex-direction: row;
     padding-left: 7%;
 }
 
-.contactinfo ul li{
+.skin3.contactinfo ul li{
     position: relative;
     list-style: none;
     cursor: pointer;
@@ -125,21 +126,21 @@
     padding-right: 20%;
 }
 
-.contactinfo ul li .icon{
+.skin3.contactinfo ul li .icon{
     display: none;
 }
 
-.contactinfo ul li .text{
+.skin3.contactinfo ul li .text{
     display: flex;
     justify-content: flex-end;
     color: #fff;
 }
 
-.contactinfo ul li span{
+.skin3.contactinfo ul li span{
     font-weight: 300;
 }
 
-.education{
+.skin3.education{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -151,7 +152,7 @@
     height: auto;
 }
 
-.education .title4{
+.skin3.education .title4{
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
@@ -160,17 +161,17 @@
     font-size: 18px;
 }
 
-.education ul{
+.skin3.education ul{
     padding-left: 0%;
     margin-top: 1%;
 }
 
-.education li{
+.skin3.education li{
     margin-bottom: 2%;
     list-style: none;
 }
 
-.education h5{
+.skin3.education h5{
     float: right;
     font-weight: 530;
     font-size: 14px;
@@ -180,24 +181,24 @@
     padding-right: 2%;
 }
 
-.education h4:nth-child(2){
+.skin3.education h4:nth-child(2){
     font-weight: 700;
     margin-top: 0%;
     margin-bottom: 0px;
 }
 
-.education h4{
+.skin3.education h4{
     font-weight: 300;
     margin-top: 1%;
     margin-bottom: 0px;
 }
 
-.languag{
+.skin3.languag{
     position: absolute;
     display: none;
 }
 
-.Experience{
+.skin3.Experience{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -208,7 +209,7 @@
     height: auto;
 }
 
-.Experience .title2{
+.skin3.Experience .title2{
     border-bottom: 2px solid rgba(187, 6, 15 ,1);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -217,7 +218,7 @@
     font-size: 18px;
 }
 
-.Experience .box{
+.skin3.Experience .box{
     display: flex;
     flex-direction: column;
     margin: 0px;
@@ -227,20 +228,20 @@
     padding-bottom: 1%;
 }
 
-.Experience .box .year_company{
+.skin3.Experience .box .year_company{
     min-width: 150px;
 }
 
-.Experience .box .year_company .year{
+.skin3.Experience .box .year_company .year{
     float: right;
 }
 
-.Experience .box .year_company .company{
+.skin3.Experience .box .year_company .company{
     font-weight: 900;
     color: rgba(0, 0, 0, 1);
 }
 
-.Experience .box .year_company h5{
+.skin3.Experience .box .year_company h5{
     text-transform: uppercase;
     font-weight: 530;
     font-size: 14px;
@@ -248,7 +249,7 @@
     margin-top: 2%;
 }
 
-.Experience .box .text h4{
+.skin3.Experience .box .text h4{
     text-transform: uppercase;
     font-weight: 900;
     color: rgba(0, 0, 0, 1);
@@ -257,13 +258,13 @@
     margin-bottom: 1%;
 }
 
-p{
+.skin3.p{
     color: #333;
     font-size: 15px;
     margin-top: 1%;
 }
 
-.Experience .box .text .description{
+.skin3.Experience .box .text .description{
     color: #333;
     padding-top: 0px;
     padding-left: 2%;
@@ -273,7 +274,7 @@ p{
     margin-bottom: 0%;
 }
 
-.DisplaySkillsList{
+.skin3.DisplaySkillsList{
     display: block !important;
     position: absolute;
     left: 1%;
@@ -285,7 +286,7 @@ p{
     height: auto;
 }
 
-.DisplaySkillsList .SkillsListTitle{
+.skin3.DisplaySkillsList .SkillsListTitle{
     border-bottom: 2px solid rgba(187, 6, 15 ,1);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -294,18 +295,18 @@ p{
     padding-right: 2%;
 }
 
-.DisplaySkillsList ul{
+.skin3.DisplaySkillsList ul{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.DisplaySkillsList ul li h4{
+.skin3.DisplaySkillsList ul li h4{
     font-weight: 400;
     margin-top: 0px;
     margin-bottom: 2%;
 }
 
-.interest{
+.skin3.interest{
     position: absolute;
     left: 1%;
     right: 1%;
@@ -316,7 +317,7 @@ p{
     height: auto;
 }
 
-.interest .title6{
+.skin3.interest .title6{
     border-bottom: 2px solid rgba(187, 6, 15 ,1);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -324,13 +325,13 @@ p{
     font-size: 18px;
 }
 
-.interest ul{
+.skin3.interest ul{
     display: grid;
     grid-template-columns:  repeat(4,1fr);
     padding-left: 2%;
 }
 
-.interest ul li{
+.skin3.interest ul li{
     color: #333;
     font-weight: 500;
     margin: 2%;
