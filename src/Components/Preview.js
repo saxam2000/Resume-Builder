@@ -1,10 +1,10 @@
 import React from "react";
-import "../html/css/templat1.css";
-import "../html/css/templat2.css";
+// import "../html/css/templat1.css";
+// import "../html/css/templat2.css";
 import "../html/css/templat3.css";
-import "../html/css/templat4.css";
-import "../html/css/templat5.css";
-import "../html/css/templat6.css";
+// import "../html/css/templat4.css";
+// import "../html/css/templat5.css";
+// import "../html/css/templat6.css";
 import { fieldCd } from "../constants/typeCodes";
 import ReactDOM from "react-dom";
 import { SocialIcon } from "react-social-icons";
@@ -72,7 +72,7 @@ let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentRed
             {ContactKeyToVal(fieldCd.FirstName, " ") +
               ContactKeyToVal(fieldCd.LastName)}
           </h2>
-          <h2 className="occupation">Web Developer</h2>
+          <h2 className={skincd+"occupation"}>Web Developer</h2>
         </div>
         <hr className={skincd+"horizontalline"} style={{ display: "none" }} />
 
@@ -164,7 +164,7 @@ let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentRed
           ))}
         </div>
         <div className={skincd+"education"}>
-          <h3 className="title4">Education</h3>
+          <h2 className="title4">Education</h2>
           <ul>
             {props.EducationSection.EducationHistories.map((education) => {
               return (
@@ -177,9 +177,9 @@ let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentRed
                   <h4>
                     {EducationKeyToVal(fieldCd.CollegeName, education.id)}
                   </h4>
-                  <h3>
+                  {/* <h4>
                     {EducationKeyToVal(fieldCd.CollegeBoard, education.id)}
-                  </h3>
+                  </h4> */}
                 </li>
               );
             })}{" "}

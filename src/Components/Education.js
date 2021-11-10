@@ -54,8 +54,16 @@ const onChange = (e,id) => {
             <h1>this is Education Section </h1>
             <button onClick={()=>history.push("/workhistory")}>go to Worksection</button>
             <button onClick={()=>history.push("/contact")}>go back</button>
-<div style={{display:"flex",flexDirection:"row",justifyContent:"space-around",alignItems:"flex-start" }}>
-  <div className="EducationHistories" style={{display:"flex",flexDirection:"column" }}>
+<div  className ="educationPage "style={{display:"flex",flexDirection:"row",justifyContent:"space-around",alignItems:"flex-start" ,width:"100%"}}>
+  
+  <div className="EducationHistories" style={{      
+    display: "flex",
+          flexDirection: "column",
+          width:"35%",
+          // justifyContent: "sp",
+          backgroundColor:"beige",
+          alignItems: "flex-start",
+          height: "50%",}}>
 {props.EducationSection.EducationHistories.map(education=>
 (
 
@@ -63,18 +71,14 @@ const onChange = (e,id) => {
   style={{
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "flex-start",
-    border:"2px solid black",
-    margin:"3px",
-
-
-
-
-    width:"30%",
+    width:"100%",
+    border: "0.5px solid #e3d4c2",
     // justifyContent: "sp",
-
+    alignItems: "flex-start",
     height: "50%",
+
+
+    
   }}
   className="EducationHtmlForm"
 >
@@ -84,7 +88,7 @@ const onChange = (e,id) => {
       flexDirection: "column",
       margin: "0 0 0 1rem",
       alignItems: "flex-start",
-      width:"41vw"
+      width:"90%"
     }}
     className="collegeName"
   >
@@ -98,7 +102,7 @@ const onChange = (e,id) => {
       onChange={(e) => onChange(e,education.id)}
       sx={{
         height: "5ch",
-        width: "92%",
+        width: "95%",
         size: "small",
       }}
       size="small"
@@ -109,8 +113,9 @@ const onChange = (e,id) => {
     style={{
       display: "flex",
       flexWrap:"",
+      width:"100%",
       flexDirection: "column",
-      margin: "3% 0 3% 3%",
+      margin: "1rem 0 1rem 1rem",
       alignItems: "flex-start",
     }}
     className="DegreeAndCGPA"
@@ -124,8 +129,8 @@ const onChange = (e,id) => {
         id="outlined-basic"
         value={getValue(fieldCd.Degree,education.id)}
         sx={{
-          width: "19vw",
-          margin: "1px 1rem 0 0",
+          width: "48%",
+          margin: "1px 6% 0 0",
         }}
         name={fieldCd.Degree}
         onChange={(e) => onChange(e,education.id)}
@@ -139,7 +144,7 @@ const onChange = (e,id) => {
         name={fieldCd.GraduationCGPA}
         onChange={(e) => onChange(e,education.id)}
         sx={{
-          width: "17vw",
+          width: "48%",
           // margin:"0 1rem 0 0"
         }}
         label="GraduationCGPA"
@@ -151,8 +156,9 @@ const onChange = (e,id) => {
     style={{
       display: "flex",
       flexWrap:"",
+      width:"100%",
       flexDirection: "column",
-      margin: "3% 0 3% 3%",
+      margin: "1rem 0 1rem 1rem",
       alignItems: "flex-start",
     }}
     className="graduationYearAndDate"
@@ -164,8 +170,8 @@ const onChange = (e,id) => {
         id="outlined-basic"
         value={getValue(fieldCd.CollegeAdmission,education.id)}
         sx={{
-          width: "19vw",
-          margin: "0 1rem 0 0",
+          width: "48%",
+          margin: "1px 6% 0 0",
         }}
         name={fieldCd.CollegeAdmission}
         onChange={(e) => onChange(e,education.id)}
@@ -179,7 +185,7 @@ const onChange = (e,id) => {
         name={fieldCd.GraduationDate}
         onChange={(e) => onChange(e,education.id)}
         sx={{
-          width: "17vw",
+          width: "48%",
           // margin:"0 1rem 0 0"
         }}
         label="GraduationDate"
@@ -191,8 +197,9 @@ const onChange = (e,id) => {
     style={{
       display: "flex",
       flexWrap:"",
+      width:"100%",
       flexDirection: "column",
-      margin: "3% 0 3% 3%",
+      margin: "1rem 0 1rem 1rem",
       alignItems: "flex-start",
     }}
     className="CollegeCityAndCollegeBoard"
@@ -204,8 +211,8 @@ const onChange = (e,id) => {
         id="outlined-basic"
         value={getValue(fieldCd.CollegeCity,education.id)}
         sx={{
-          width: "19vw",
-          margin: "0 1rem 0 0",
+          width: "48%",
+          margin: "1px 6% 0 0",
         }}
         name={fieldCd.CollegeCity}
         onChange={(e) => onChange(e,education.id)}
@@ -219,7 +226,7 @@ const onChange = (e,id) => {
         name={fieldCd.CollegeBoard}
         onChange={(e) => onChange(e,education.id)}
         sx={{
-          width: "17vw",
+          width: "48%",
           // margin:"0 1rem 0 0"
         }}
         label="CollegeBoard"
@@ -304,7 +311,7 @@ const onChange = (e,id) => {
               name={fieldCd.GraduationCGPA}
               onChange={(e) => onChange(e)}
               sx={{
-                width: "17vw",
+                width: "48%",
                 // margin:"0 1rem 0 0"
               }}
               label="GraduationCGPA"
@@ -344,7 +351,7 @@ const onChange = (e,id) => {
               name={fieldCd.GraduationDate}
               onChange={(e) => onChange(e)}
               sx={{
-                width: "17vw",
+                width: "48%",
                 // margin:"0 1rem 0 0"
               }}
               label="GraduationDate"
@@ -384,7 +391,7 @@ const onChange = (e,id) => {
               name={fieldCd.CollegeBoard}
               onChange={(e) => onChange(e)}
               sx={{
-                width: "17vw",
+                width: "48%",
                 // margin:"0 1rem 0 0"
               }}
               label="CollegeBoard"

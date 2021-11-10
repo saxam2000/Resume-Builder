@@ -8,7 +8,7 @@ function LandingPage() {
         <div>
             <h1>Landing Page</h1>
             <button onClick={()=>{
-                history.push("/contact")
+                history.push("/templates")
             }}> go to contact form </button>
         </div>
     )

@@ -21,12 +21,13 @@ if(props.DocumentReducer.id==null){
     return (
         <div>
             <button name="nothing" onClick={()=>history.push("/contact")}>next</button>
+            <button name="nothing" onClick={()=>history.push("/")}>back</button>
             <button name="1" onClick={(e)=>handleSelect(e)}>template1</button>
             <button name="2" onClick={(e)=>handleSelect(e)}>template2</button>
             <button name="3" onClick={(e)=>handleSelect(e)}>template3</button>
             <button name="4" onClick={(e)=>handleSelect(e)}>template4</button>
-            <button name="5" onClick={(e)=>handleSelect(e)}>template4</button>
-            <button name="6" onClick={(e)=>handleSelect(e)}>template4</button>
+            <button name="5" onClick={(e)=>handleSelect(e)}>template5</button>
+            <button name="6" onClick={(e)=>handleSelect(e)}>template6</button>
         </div>
     )
 }

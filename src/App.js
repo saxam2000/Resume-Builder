@@ -8,8 +8,9 @@ import WorkHistory from './Components/WorkHistory';
 import NavBar from './Components/NavBar';
 import Firebasetest from './Firebasetest';
 import Register from './Components/register';
-import Templates from "./Components/Templates"
-import './App.css';
+import Templates from "./Components/Templates";
+import DummyPreview from "./Components/DummyPreview";
+// import './App.css';
 import { Provider } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -31,6 +32,7 @@ function App() {
 <Route exact path="/test" component={Firebasetest}></Route>
 <Route exact path="/Register" component={Register}></Route>
 <Route exact path="/templates" component={Templates}></Route>
+<Route exact path="/dummy" component={DummyPreview}></Route>
       {/* <Contact></Contact> */}
 </Switch>
     </div>

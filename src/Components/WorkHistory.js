@@ -65,140 +65,53 @@ const  addjob=async()=>{
         <h1>work Section</h1>
         <button onClick={()=>history.push("/preview")}> go to preview page</button>
         <button onClick={()=>history.push("/education")}> go back</button>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems:"flex-start"
-        }}
+      <div className ="workHistoryPage"style={{display:"flex",flexDirection:"row",justifyContent:"space-around",alignItems:"flex-start" ,width:"100%"}}
+        
       >
         <div
-          style={{
-            margin:"3px",
+          style={{      
             display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            height: "50%",
-          }}
-          className="WorkHistoryHtmlForm"
+                  flexDirection: "column",
+                  width:"35%",
+                  // justifyContent: "sp",
+                  backgroundColor:"beige",
+                  alignItems: "flex-start",
+                  height: "50%",}}
+          className="workHistories"
         >
-          {/* <div className="JobTitleAndCompanyName">
-            <TextField
-              size="small"
-              id="outlined-basic"
-              value={getValue(fieldCd.JobTitle)}
-              name={fieldCd.JobTitle}
-              sx={{
-                width: "15rem",
-                marginBottom: "2px",
-
-                margin: "3px 1rem 0 0",
-              }}
-              onChange={(e) => onChange(e)}
-              label="JobTitle"
-              variant="outlined"
-            />
-            <TextField
-              size="small"
-              id="outlined-basic"
-              sx={{
-                width: "14rem",
-                marginBottom: "2px",
-
-                margin: "3px 0rem 0 0",
-              }}
-              value={getValue(fieldCd.CompanyName)}
-              name={fieldCd.CompanyName}
-              onChange={(e) => onChange(e)}
-              label="CompanyName"
-              variant="outlined"
-            />
-          </div>
-          <div className="CompanyCityAndState">
-            <TextField
-              size="small"
-              id="outlined-basic"
-              value={getValue(fieldCd.JobState)}
-              name={fieldCd.JobState}
-              sx={{
-                width: "15rem",
-                marginBottom: "2px",
-
-                margin: "3px 1rem 0 0",
-              }}
-              onChange={(e) => onChange(e)}
-              label="JobState"
-              variant="outlined"
-            />
-            <TextField
-              size="small"
-              id="outlined-basic"
-              sx={{
-                width: "14rem",
-                marginBottom: "2px",
-
-                margin: "3px 0rem 0 0",
-              }}
-              value={getValue(fieldCd.JobCity)}
-              name={fieldCd.JobCity}
-              onChange={(e) => onChange(e)}
-              label="JobCity"
-              variant="outlined"
-            />
-          </div>
-
-          <div className="JobStartAndEndTime">
-            <TextField
-              size="small"
-              id="outlined-basic"
-              value={getValue(fieldCd.JobEndDate)}
-              name={fieldCd.JobEndDate}
-              sx={{
-                width: "15rem",
-                marginBottom: "2px",
-
-                margin: "3px 1rem 0 0",
-              }}
-              onChange={(e) => onChange(e)}
-              label="JobEndDate"
-              variant="outlined"
-            />
-            <TextField
-              size="small"
-              id="outlined-basic"
-              sx={{
-                width: "14rem",
-                marginBottom: "2px",
-
-                margin: "3px 0rem 0 0",
-              }}
-              value={getValue(fieldCd.JobStartDate)}
-              name={fieldCd.JobStartDate}
-              onChange={(e) => onChange(e)}
-              label="JobStartDate"
-              variant="outlined"
-            />
-          </div> */}
-
 {
  props.WorkSection.workHistories.map(work=>{
    return (
-     <div style={{border:"2px solid black",margin:"3px"}} key={work.id}>
+     <div  className="workhistoryhtmlform"style={{    display: "flex",
+    flexDirection: "column",
+    width:"100%",
+    border: "0.5px solid #e3d4c2",
+    // justifyContent: "sp",
+    alignItems: "flex-start",
+    height: "50%",}} key={work.id}>
        <h1>{work.id+1}</h1>
 
-                 <div className="JobTitleAndCompanyName">
+
+       <div
+    style={{
+      display: "flex",
+      flexWrap:"",
+      width:"100%",
+      flexDirection: "column",
+      margin: "1rem 0 1rem 1rem",
+      alignItems: "flex-start",
+    }}
+    className="JobTitleAndCompanyNameMain"
+  >
+<div style={{display:"flex",flexDirection:"row",flexWrap:"nowrap"}} className="JobTitleAndCompanyName">
             <TextField
               size="small"
               id="outlined-basic"
               value={getValue(fieldCd.JobTitle,work.id)}
               name={fieldCd.JobTitle}
               sx={{
-                width: "15rem",
-                marginBottom: "2px",
-
-                margin: "3px 1rem 0 0",
+                width: "48%",
+                margin: "1px 6% 0 0",
               }}
               onChange={(e) => onChange(e,work.id)}
               label="JobTitle"
@@ -208,10 +121,7 @@ const  addjob=async()=>{
               size="small"
               id="outlined-basic"
               sx={{
-                width: "14rem",
-                marginBottom: "2px",
-
-                margin: "3px 0rem 0 0",
+                width: "48%",
               }}
               value={getValue(fieldCd.CompanyName,work.id)}
               name={fieldCd.CompanyName}
@@ -219,18 +129,26 @@ const  addjob=async()=>{
               label="CompanyName"
               variant="outlined"
             />
-          </div>
-          <div className="CompanyCityAndState">
+            </div>
+            </div>
+            
+            <div style={{
+      display: "flex",
+      flexWrap:"",
+      width:"100%",
+      flexDirection: "column",
+      margin: "1rem 0 1rem 1rem",
+      alignItems: "flex-start",
+    }} className="DegreeAndCGPA">
+          <div style={{display:"flex",flexDirection:"row",flexWrap:"nowrap"}} className="JobStateAndCity">
             <TextField
               size="small"
               id="outlined-basic"
               value={getValue(fieldCd.JobState,work.id)}
               name={fieldCd.JobState}
               sx={{
-                width: "15rem",
-                marginBottom: "2px",
-
-                margin: "3px 1rem 0 0",
+                width: "48%",
+                margin: "1px 6% 0 0",
               }}
               onChange={(e) => onChange(e,work.id)}
               label="JobState"
@@ -240,10 +158,7 @@ const  addjob=async()=>{
               size="small"
               id="outlined-basic"
               sx={{
-                width: "14rem",
-                marginBottom: "2px",
-
-                margin: "3px 0rem 0 0",
+                width: "48%",
               }}
               value={getValue(fieldCd.JobCity,work.id)}
               name={fieldCd.JobCity}
@@ -252,18 +167,24 @@ const  addjob=async()=>{
               variant="outlined"
             />
           </div>
-
-          <div className="JobStartAndEndTime">
+          </div>
+<div  style={{
+      display: "flex",
+      flexWrap:"",
+      width:"100%",
+      flexDirection: "column",
+      margin: "1rem 0 1rem 1rem",
+      alignItems: "flex-start",
+    }}className="JobStartAndEndTimeMain">
+          <div style={{display:"flex",flexDirection:"row",flexWrap:"nowrap"}} className="JobStartAndEndTime">
             <TextField
               size="small"
               id="outlined-basic"
               value={getValue(fieldCd.JobEndDate,work.id)}
               name={fieldCd.JobEndDate}
               sx={{
-                width: "15rem",
-                marginBottom: "2px",
-
-                margin: "3px 1rem 0 0",
+                width: "48%",
+                margin: "1px 6% 0 0",
               }}
               onChange={(e) => onChange(e,work.id)}
               label="JobEndDate"
@@ -273,10 +194,7 @@ const  addjob=async()=>{
               size="small"
               id="outlined-basic"
               sx={{
-                width: "14rem",
-                marginBottom: "2px",
-
-                margin: "3px 0rem 0 0",
+                width: "48%",
               }}
               value={getValue(fieldCd.JobStartDate,work.id)}
               name={fieldCd.JobStartDate}
@@ -284,27 +202,30 @@ const  addjob=async()=>{
               label="JobStartDate"
               variant="outlined"
             />
-          </div>
-          <div className="JobDescription">
+          </div></div>
+          <div style={{display:"flex",flexDirection:"row",flexWrap:"nowrap"}} className="JobDescription">
        <TextField
               size="small"
               id="outlined-basic"
               value={getValue(fieldCd.JobDescription,work.id)}
+              multiline
+              maxRows={4}
               name={fieldCd.JobDescription}
               sx={{
                 width: "30rem",
                 marginBottom: "2px",
 
-                margin: "3px 0 0 0",
+                margin: "1rem 0 1rem 1rem",
               }}
               onChange={(e) => onChange(e,work.id)}
               label="JobDescription"
               variant="outlined"
             />
             </div>
+            </div>
+           
 
-
-     </div>
+   
    )
  })
 }

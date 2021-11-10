@@ -73,7 +73,7 @@ let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentRed
             {ContactKeyToVal(fieldCd.FirstName, " ") +
               ContactKeyToVal(fieldCd.LastName)}
           </h2>
-          <h2 className="occupation">Web Developer</h2>
+          <h2 className={skincd+"occupation"}>Web Developer</h2>
         </div>
         <hr className={skincd+"horizontalline"} style={{ display: "none" }} />
 
@@ -178,9 +178,9 @@ let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentRed
                   <h4>
                     {EducationKeyToVal(fieldCd.CollegeName, education.id)}
                   </h4>
-                  <h3>
+                  {/* <h3>
                     {EducationKeyToVal(fieldCd.CollegeBoard, education.id)}
-                  </h3>
+                  </h3> */}
                 </li>
               );
             })}{" "}

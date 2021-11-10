@@ -24,9 +24,9 @@ import { useHistory } from "react-router";
     
   }
   useEffect(()=>{
-     if(props.auth?.uid){
-       history.push("/");
-     }
+    //  if(props.auth?.uid){
+    //    history.push("/");
+    //  }
      setLoading(false);
 
   },[props])

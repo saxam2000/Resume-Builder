@@ -42,11 +42,15 @@ function Contact(props) {
 
   return (
     <div>
+      <div style={{  display:"flex" , alignItems:"center",justifyContent:'center'}}>
       <h1>this is Contact</h1>
       <button onClick={()=>{console.log("clicked")
     history.push("/education")}}> go to education</button>
       <button onClick={()=>{console.log("clicked")
     history.push("/templates")}}> go back</button>
+
+      </div>
+      
     <div style={{display:"flex",flexDirection:"row",
      alignItems:"flex-start",
     justifyContent:"space-around"}}>
@@ -58,6 +62,8 @@ function Contact(props) {
           flexDirection: "column",
           width:"30%",
           // justifyContent: "sp",
+          border: "0.5px solid #e3d4c2",
+          backgroundColor:"beige",
           alignItems: "flex-start",
           height: "50%",
         }}
@@ -68,7 +74,7 @@ function Contact(props) {
             display: "flex",
             flexDirection: "column",
             width:"100%",
-            margin: "0 0 0 1rem",
+margin: "2%",
             alignItems: "flex-start",
           }}
           className="emailInput"
@@ -83,7 +89,7 @@ function Contact(props) {
             onChange={(e) => onChange(e)}
             sx={{
               height: "5ch",
-              width: "100%",
+              width: "90%",
               size: "small",
             }}
             size="small"
@@ -94,9 +100,9 @@ function Contact(props) {
           style={{
             display: "flex",
             flexWrap:"",
-            width:"100%",
+            width:"90%",
             flexDirection: "column",
-            margin: "1px 0 1px 1rem",
+            margin: "2%",
             alignItems: "flex-start",
           }}
           className="nameInput"
@@ -153,7 +159,7 @@ function Contact(props) {
             name={fieldCd.Address}
             sx={{
               width: "100%",
-              marginBottom: "2px",
+              marginBottom: "0.5rem",
             }}
             onChange={(e) => onChange(e)}
             label="Address"
@@ -166,7 +172,7 @@ function Contact(props) {
             name={fieldCd.Street}
             sx={{
               width: "100%",
-              marginBottom: "2px",
+              marginBottom: "0.5rem",
             }}
             onChange={(e) => onChange(e)}
             label="Street"
@@ -179,7 +185,7 @@ function Contact(props) {
             name={fieldCd.Phone}
             sx={{
               width: "100%",
-              marginBottom: "2px",
+              marginBottom: "0.5rem",
             }}
             onChange={(e) => onChange(e)}
             label="Phone"
@@ -208,7 +214,7 @@ function Contact(props) {
               value={getValue(fieldCd.State)}
               name={fieldCd.State}
               sx={{
-                width: "48%",                marginBottom: "2px",
+                width: "48%",                marginBottom: "0.5rem",
 
                 margin: "0 0 0 0",
               }}
@@ -238,7 +244,7 @@ function Contact(props) {
               size="small"
               id="outlined-basic"
               sx={{
-                width: "48%",                marginBottom: "2px",
+                width: "48%",                marginBottom: "0.5rem",
 
                 margin: "0 0 0 0",
               }}
@@ -271,7 +277,7 @@ function Contact(props) {
               size="small"
               id="outlined-basic"
               sx={{
-                width: "48%",                marginBottom: "2px",
+                width: "48%",                marginBottom: "0.5rem",
 
                 margin: "0 0 0 0",
               }}
@@ -303,7 +309,7 @@ function Contact(props) {
               size="small"
               id="outlined-basic"
               sx={{
-                width: "48%",                marginBottom: "2px",
+                width: "48%",                marginBottom: "0.5rem",
 
                 margin: "0 0 0 0",
               }}
@@ -319,7 +325,7 @@ function Contact(props) {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                margin: "0 0 0 1rem",
+    margin: "2%",
                 alignItems: "flex-start",
               }}
               className="ProfessionInput"
