@@ -45,6 +45,8 @@ function Contact(props) {
       <h1>this is Contact</h1>
       <button onClick={()=>{console.log("clicked")
     history.push("/education")}}> go to education</button>
+      <button onClick={()=>{console.log("clicked")
+    history.push("/templates")}}> go back</button>
     <div style={{display:"flex",flexDirection:"row",
      alignItems:"flex-start",
     justifyContent:"space-around"}}>
@@ -337,7 +339,7 @@ function Contact(props) {
             </div> */}
           
       </div>
-      <Preview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></Preview>
+      <Preview ContactSection={props.ContactSection} DocumentReducer={props.DocumentReducer} WorkSection={props.WorkSection} EducationSection={props.EducationSection}></Preview>
 
       </div>
     </div>

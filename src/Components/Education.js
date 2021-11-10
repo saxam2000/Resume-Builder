@@ -53,6 +53,7 @@ const onChange = (e,id) => {
         <div>
             <h1>this is Education Section </h1>
             <button onClick={()=>history.push("/workhistory")}>go to Worksection</button>
+            <button onClick={()=>history.push("/contact")}>go back</button>
 <div style={{display:"flex",flexDirection:"row",justifyContent:"space-around",alignItems:"flex-start" }}>
   <div className="EducationHistories" style={{display:"flex",flexDirection:"column" }}>
 {props.EducationSection.EducationHistories.map(education=>
@@ -64,10 +65,16 @@ const onChange = (e,id) => {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-start",
-    height: "58vh",
     border:"2px solid black",
     margin:"3px",
-    width:"43vw"
+
+
+
+
+    width:"30%",
+    // justifyContent: "sp",
+
+    height: "50%",
   }}
   className="EducationHtmlForm"
 >
@@ -388,7 +395,7 @@ const onChange = (e,id) => {
 
           </div> */}
           {/* <SamplePreview ContactSection={props.ContactSection} EducationSection={props.EducationSection}></SamplePreview> */}
-          <Preview ContactSection={props.ContactSection} WorkSection={props.WorkSection} EducationSection={props.EducationSection}></Preview>
+          <Preview ContactSection={props.ContactSection} DocumentReducer={props.DocumentReducer} WorkSection={props.WorkSection} EducationSection={props.EducationSection}></Preview>
 
           </div>
         </div>

@@ -1,5 +1,10 @@
 import React from "react";
+import "../html/css/templat1.css";
+import "../html/css/templat2.css";
+import "../html/css/templat3.css";
 import "../html/css/templat4.css";
+import "../html/css/templat5.css";
+import "../html/css/templat6.css";
 import { fieldCd } from "../constants/typeCodes";
 import ReactDOM from "react-dom";
 import { SocialIcon } from "react-social-icons";
@@ -20,6 +25,7 @@ library.add(fab, faTwitterSquare, faFacebook, faLinkedin, faGithub);
 // import {FontAwesomeIcon} from "FontAwesomeIcon"
 
 function Preview(props) {
+  console.log(props)
   const ContactKeyToVal = (key, valToAppend) => {
     if (props.ContactSection) {
       return props.ContactSection[key]
@@ -50,13 +56,15 @@ function Preview(props) {
     }
     return "";
   };
-
+  let code=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentReducer?.skinCode}`;
+  console.log(code) ;
+let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentReducer?.skinCode} `;
   console.log(props);
   return (
-      <div style={{overflow:"scroll",height:"100vh",width:"230mm"}}>
-    <div className="outer-container"  >
-      <div className="container"style={{height:"200vh"}}>
-        <div className="profiletext">
+      <div >
+    <div className={skincd+"outer-container"} >
+      <div className={skincd+"container"} >
+        <div className={skincd+"profiletext"}>
           <div className="imgbx">
             <img src="images/Pierre-Person.jpg" alt="" />
           </div>
@@ -66,19 +74,19 @@ function Preview(props) {
           </h2>
           <h2 className="occupation">Web Developer</h2>
         </div>
-        <hr className="horizontalline" style={{ display: "none" }} />
+        <hr className={skincd+"horizontalline"} style={{ display: "none" }} />
 
-        <div className="about">
+        <div className={skincd+"about"}>
           <h2 className="title3">Profile</h2>
-          <p>
+          <p className={skincd+"p"}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
             sed corrupti quia eveniet in odio cupiditate recusandae ipsam esse,
             maiores repudiandae quisquam voluptatibus illum eligendi molestiae,
             id voluptas illo laborum.
           </p>
         </div>
-        <div className="contactinfo">
-          <h3 className="title">Contact Info</h3>
+        <div className={skincd+"contactinfo"}>
+          <h3 className={skincd+"title"}>Contact Info</h3>
           <ul>
             <li>
               <span className="icon">
@@ -104,7 +112,7 @@ function Preview(props) {
               <span className="icon">
                 <i className="fa fa-globe" aria-hidden="true"></i>
               </span>
-              <span className="text">www.mywebsite.com</span>
+              <span className="text">www.mywebsfs</span>
             </li>
             <li>
               {/*
@@ -137,8 +145,8 @@ function Preview(props) {
             </li>
           </ul>
         </div>
-        <div className="Experience" style={{height:"auto"}}>
-          <h2 className="title2">Experience</h2>
+        <div className={skincd+"Experience"} style={{height:"auto"}}>
+          <h2 className={skincd+"title2"}>Experience</h2>
           {props?.WorkSection?.workHistories.map((work) => (
             <div className="box" key={work.id}>
               <div className="year_company">
@@ -150,12 +158,12 @@ function Preview(props) {
               </div>
               <div className="text">
                 <h4>{getWorkHistory(fieldCd.JobTitle, work.id)}</h4>
-                <p>{getWorkHistory(fieldCd.JobDescription, work.id)}</p>
+                <p className={skincd+"p"}>{getWorkHistory(fieldCd.JobDescription, work.id)}</p>
               </div>
             </div>
           ))}
         </div>
-        <div className="education">
+        <div className={skincd+"education"}>
           <h3 className="title4">Education</h3>
           <ul>
             {props.EducationSection.EducationHistories.map((education) => {
@@ -194,7 +202,7 @@ function Preview(props) {
             */}
           </ul>
         </div>
-        <div className="DisplaySkillsList" style={{ display: "none" }}>
+        <div className={skincd+"DisplaySkillsList"} style={{ display: "none" }}>
           <h2 className="SkillsListTitle">Professional Skills</h2>
           <ul>
             <li>
@@ -214,7 +222,7 @@ function Preview(props) {
             </li>
           </ul>
         </div>
-        <div className="DisplaySkillsPercentage" style={{ display: "none" }}>
+        <div className={skincd+"DisplaySkillsPercentage"} style={{ display: "none" }}>
           <h2 className="SkillsPercentageTitle">Professional Skills</h2>
           <div className="box">
             <h4>Html</h4>
@@ -247,7 +255,7 @@ function Preview(props) {
             </div>
           </div>
         </div>
-        <div className="languag">
+        <div className={skincd+"languag"}>
           <h2 className="title8">Languages</h2>
           <ul>
             <li>
@@ -270,7 +278,7 @@ function Preview(props) {
             </li>
           </ul>
         </div>
-        <div className="interest">
+        <div className={skincd+"interest"}>
           <h2 className="title6">Interest</h2>
           <ul>
             <li>Gaming</li>

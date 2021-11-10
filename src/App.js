@@ -6,6 +6,9 @@ import Preview from "./Components/Preview"
 import SamplePreview from './Components/SamplePreview';
 import WorkHistory from './Components/WorkHistory';
 import NavBar from './Components/NavBar';
+import Firebasetest from './Firebasetest';
+import Register from './Components/register';
+import Templates from "./Components/Templates"
 import './App.css';
 import { Provider } from 'react-redux';
 import {
@@ -17,19 +20,19 @@ function App() {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <Router>
+
 <Switch>
 
-      <Provider store={Store}>
 <Route path="/" exact component={LandingPage}></Route>
 <Route path="/contact" exact component={Contact}></Route>
 <Route path="/education" exact component={Education}></Route>
 <Route exact path="/preview" component={SamplePreview}></Route>
 <Route exact path="/workhistory" component={WorkHistory}></Route>
+<Route exact path="/test" component={Firebasetest}></Route>
+<Route exact path="/Register" component={Register}></Route>
+<Route exact path="/templates" component={Templates}></Route>
       {/* <Contact></Contact> */}
-      </Provider>
 </Switch>
-      </Router>
     </div>
   );
 }

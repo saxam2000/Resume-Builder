@@ -64,6 +64,7 @@ const  addjob=async()=>{
     <div>
         <h1>work Section</h1>
         <button onClick={()=>history.push("/preview")}> go to preview page</button>
+        <button onClick={()=>history.push("/education")}> go back</button>
       <div
         style={{
           display: "flex",
@@ -314,7 +315,7 @@ const  addjob=async()=>{
 
 
         </div>
-        <Preview ContactSection={props.ContactSection} WorkSection={props.WorkSection} EducationSection={props.EducationSection}></Preview>
+        <Preview ContactSection={props.ContactSection} DocumentReducer={props.DocumentReducer} WorkSection={props.WorkSection} EducationSection={props.EducationSection}></Preview>
       </div>
     </div>
   );
