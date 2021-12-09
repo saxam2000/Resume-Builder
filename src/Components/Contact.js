@@ -25,6 +25,7 @@ function Contact(props) {
 //   const [Pincode, setPincode] = useState("");
   //   const [fname, setfname] = useState("hello");
 
+
   const onChange=(e)=>{
       let key=e.target.name;
       let val=e.target.value;

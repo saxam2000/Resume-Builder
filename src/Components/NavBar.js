@@ -1,4 +1,8 @@
-import React from 'react'
+import React,{useState,useEffect} from "react";
+import { isLoaded } from 'react-redux-firebase'
+import { connect } from "react-redux";
+import * as authActions from '../Reducers/authActions';
+import { useHistory } from "react-router";
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -8,9 +12,10 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 // import MenuIcon from '@mui/icons-material/Menu';
 
-function NavBar() {
+function NavBar(props) {
+  const history=useHistory();
     return (
-        <div>
+        <div style={{height:"10%"}}>
             <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
@@ -26,13 +31,24 @@ function NavBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
           </Typography>
-          <Button color="inherit">Login</Button>
+          {!props.auth?.uid?(<><Button color="inherit" onClick={()=>{history.push("/signin")}}>Login</Button><Button color="inherit" onClick={()=>{history.push("/register")}}>signup</Button></>):(<><Button onClick={()=>{props.signout()}} color="inherit">logout</Button></>)}
+          
         </Toolbar>
       </AppBar>
     </Box>
         </div>
     )
 }
-
-export default NavBar
+const mapStateToProps=(store)=>{
+  return{
+    auth:store.firebase.auth,
+    authMine:store.auth,
+  }
+}
+const mapDispatchToProps=(dispatch)=>{
+  return {
+      signout:()=>{dispatch(authActions.signout())}
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(NavBar)
 

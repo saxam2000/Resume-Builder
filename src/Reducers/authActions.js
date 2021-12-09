@@ -26,9 +26,10 @@ export const signIn=(userData)=>{
         try{
             console.log(userData);
         let data = await firebase.auth().signInWithEmailAndPassword(userData.email,userData.password)
-        console.log(data.user.uid);
+        console.log(data);
+        console.log(data.uid);
      
-            dispatch({type: actionTypes.SIGN_IN_SUCCESS})
+            dispatch({type: actionTypes.SIGN_IN_SUCCESS,uid:data.uid})
     }
         catch(err) {
             console.log("Error is ", err)
@@ -53,7 +54,7 @@ export const register=(userData)=>{
                 email:userData.email,password:userData.password,
                 resumeIds:[]
               });
-              dispatch({type: actionTypes.REGISTER})
+              dispatch({type: actionTypes.REGISTER,uid:data.uid})
         }).catch((err) => {
             dispatch({type: actionTypes.REGISTER_FAILED,error:err})
             console.log("signIn 3 method",err);
@@ -65,15 +66,19 @@ export const setUser=(data)=>{
     dispatch({type:actionTypes.SET_USER, payload:data})
     }
 }
-export function signout(){
-    return (dispatch, getState, {getFirebase}) => {
+export const signout=()=>{
+    // console.log("aa");
+    return async (dispatch, getState, {getFirebase,getFirestore}) => {
         console.log('signing out')
-        const firebase = getFirebase();
+        const firebase = getFirebase();     
         firebase.auth().signOut(
-        ).then(() => {
-            dispatch({type: actionTypes.SIGN_OUT})
-        }).catch((err) => {
+            ).then(() => {
+                // console.log("bb");
+                dispatch({type: actionTypes.SIGN_OUT})
+            }).catch((err) => {
+            // console.log("bb");
             dispatch({type: actionTypes.SIGN_OUT_FAILED,error:err})
         });
     }
+    // console.log("bb");
 }

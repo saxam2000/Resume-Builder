@@ -86,7 +86,7 @@ let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentRed
           </p>
         </div>
         <div className={skincd+"contactinfo"}>
-          <h3 className={skincd+"title"}>Contact Info</h3>
+          <h2 className={skincd+"title"}>Contact Info</h2>
           <ul>
             <li>
               <span className="icon">
