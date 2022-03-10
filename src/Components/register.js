@@ -52,13 +52,13 @@ import TextField from "@mui/material/TextField";
           alignItems: "center",
           height: "90vh",
           width: "98vw",
-          backgroundColor:"f7e2b2",
+          backgroundColor:"#f7e2b2",
           
         }}
       >
         <div
           className="signinForm"
-          style={{ border: "1px solid #d3bd22", width: "50rem" ,fontSize:"1rem",backgroundColor:"edd99f"}}
+          style={{ border: "1px solid #d3bd22", width: "50rem" ,fontSize:"1rem",backgroundColor:"#edd99f"}}
         >
           <h1>Sign up</h1>
           <div

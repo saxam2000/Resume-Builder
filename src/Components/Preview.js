@@ -1,10 +1,16 @@
 import React from "react";
-// import "../html/css/templat1.css";
-// import "../html/css/templat2.css";
+import { useHistory } from "react-router-dom";
+import { useEffect } from "react";
+import {Component, PropTypes} from 'react';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
+import "../html/css/templat1.css";
+import "../html/css/templat2.css";
 import "../html/css/templat3.css";
-// import "../html/css/templat4.css";
-// import "../html/css/templat5.css";
-// import "../html/css/templat6.css";
+import "../html/css/templat4.css";
+import "../html/css/templat5.css";
+import "../html/css/templat6.css";
+import {connect} from "react-redux"
 import { fieldCd } from "../constants/typeCodes";
 import ReactDOM from "react-dom";
 import { SocialIcon } from "react-social-icons";
@@ -17,6 +23,7 @@ import {
   faLinkedin,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { buttonBaseClasses } from "@mui/material";
 
 library.add(fab, faTwitterSquare, faFacebook, faLinkedin, faGithub);
 // import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
@@ -26,6 +33,7 @@ library.add(fab, faTwitterSquare, faFacebook, faLinkedin, faGithub);
 
 function Preview(props) {
   console.log(props)
+  const history=useHistory();
   const ContactKeyToVal = (key, valToAppend) => {
     if (props.ContactSection) {
       return props.ContactSection[key]
@@ -34,6 +42,11 @@ function Preview(props) {
     }
     return "";
   };
+  useEffect(() => {
+    let bt=document.querySelector(".bt")
+    bt.click();
+    
+  }, []);
 
   const getWorkHistory = (key, id, valToAppend) => {
     // console.log("came");
@@ -56,12 +69,29 @@ function Preview(props) {
     }
     return "";
   };
+  function handlebt(){
+    
+    window.print();
+    history.push("/Preview");
+  }
+
   let code=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentReducer?.skinCode}`;
   console.log(code) ;
 let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentReducer?.skinCode} `;
   console.log(props);
   return (
-      <div >
+    <div height="1vh" position= "absolute" >
+        <button className={"bt"} onClick={handlebt}> </button>
+        <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <h1>Resume</h1>
+
+        </div>
     <div className={skincd+"outer-container"} >
       <div className={skincd+"container"} >
         <div className={skincd+"profiletext"}>
@@ -86,7 +116,7 @@ let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentRed
           </p>
         </div>
         <div className={skincd+"contactinfo"}>
-          <h2 className={skincd+"title"}>Contact Info</h2>
+          <h3 className={skincd+"title"}>Contact Info</h3>
           <ul>
             <li>
               <span className="icon">
@@ -164,7 +194,7 @@ let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentRed
           ))}
         </div>
         <div className={skincd+"education"}>
-          <h2 className="title4">Education</h2>
+          <h3 className="title4">Education</h3>
           <ul>
             {props.EducationSection.EducationHistories.map((education) => {
               return (
@@ -177,9 +207,9 @@ let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentRed
                   <h4>
                     {EducationKeyToVal(fieldCd.CollegeName, education.id)}
                   </h4>
-                  {/* <h4>
+                  {/* <h3>
                     {EducationKeyToVal(fieldCd.CollegeBoard, education.id)}
-                  </h4> */}
+                  </h3> */}
                 </li>
               );
             })}{" "}
@@ -292,5 +322,7 @@ let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentRed
     </div>
   );
 }
-
-export default Preview;
+const mapStateToProps=(store)=>{
+    return store;
+}
+export default connect(mapStateToProps )(Preview);

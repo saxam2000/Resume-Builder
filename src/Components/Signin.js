@@ -53,13 +53,13 @@ function Signin(props) {
           alignItems: "center",
           height: "90vh",
           width: "98vw",
-          backgroundColor:"f7e2b2",
+          backgroundColor:"#f7e2b2",
           
         }}
       >
         <div
           className="signinForm"
-          style={{ border: "1px solid #d3bd22", width: "50rem" ,fontSize:"1rem",backgroundColor:"edd99f"}}
+          style={{ border: "1px solid #d3bd22", width: "50rem" ,fontSize:"1rem",backgroundColor:"#edd99f"}}
         >
           <h1>Sign In</h1>
           <div className="email-Input" style={{margin:"4rem 0"}}>

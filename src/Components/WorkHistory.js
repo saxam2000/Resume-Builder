@@ -62,9 +62,19 @@ const  addjob=async()=>{
 
   return (
     <div>
+        <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <h1>work Section</h1>
-        <button onClick={()=>history.push("/preview")}> go to preview page</button>
-        <button onClick={()=>history.push("/education")}> go back</button>
+        <button          style={{border:"2px solid black", backgroundcolor:"red",height:"2rem",width:"7rem",margin:"0 0 0 1rem"}}
+ onClick={()=>history.push("/preview")}> Preview</button>
+        <button         style={{border:"2px solid black", backgroundcolor:"red",height:"2rem",width:"7rem",margin:"0 0 0 1rem"}}
+ onClick={()=>history.push("/education")}> Go back</button>
+        </div>
       <div className ="workHistoryPage"style={{display:"flex",flexDirection:"row",justifyContent:"space-around",alignItems:"flex-start" ,width:"100%"}}
         
       >

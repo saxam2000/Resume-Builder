@@ -29,7 +29,7 @@ function NavBar(props) {
             {/* <MenuIcon /> */}
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            SP.RESUME
           </Typography>
           {!props.auth?.uid?(<><Button color="inherit" onClick={()=>{history.push("/signin")}}>Login</Button><Button color="inherit" onClick={()=>{history.push("/register")}}>signup</Button></>):(<><Button onClick={()=>{props.signout()}} color="inherit">logout</Button></>)}
           

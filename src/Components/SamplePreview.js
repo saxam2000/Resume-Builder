@@ -1,4 +1,8 @@
 import React from "react";
+import {Component, PropTypes} from 'react';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
+import { useHistory } from "react-router-dom";
 import "../html/css/templat1.css";
 import "../html/css/templat2.css";
 import "../html/css/templat3.css";
@@ -26,6 +30,7 @@ library.add(fab, faTwitterSquare, faFacebook, faLinkedin, faGithub);
 // import {FontAwesomeIcon} from "FontAwesomeIcon"
 
 function SamplePreview(props) {
+  const history=useHistory();
   console.log(props)
   const ContactKeyToVal = (key, valToAppend) => {
     if (props.ContactSection) {
@@ -57,12 +62,96 @@ function SamplePreview(props) {
     }
     return "";
   };
+  function handleDownload(){
+    let page=document.querySelector(".outer-container");
+    let input=page;
+    console.log("abc");
+    history.push("/final")
+    // var printContents = page.innerHTML;
+    //  var originalContents = document.body.innerHTML;
+
+    //  document.body.innerHTML = printContents;
+
+    //  window.print();
+
+    //  document.body.innerHTML = originalContents;
+
+    // let w=window.open();
+    // w.document.write(page.innerHTML);
+    // w.print();
+    // w.close();
+
+    // window.print(input);
+
+    // html2canvas(input)
+    //   .then((canvas) => {
+    //     const imgData = canvas.toDataURL('image/png');
+    //     const pdf = new jsPDF();
+    //     pdf.addImage(imgData, 'JPEG', 0, 0);
+    //     // pdf.output('dataurlnewwindow');
+    //     pdf.save("download.pdf");
+    //   })
+    // ;
+
+    // var doc = new jsPDF();          
+    // var elementHandler = {
+    //   '#ignorePDF': function (element, renderer) {
+    //     return true;
+    //   }
+    // };
+    // var source = page;
+    // doc.html(source, {
+    //   'x': 15,
+    //   'y': 15,
+    //   'width': 200,
+    //   // 'elementHandlers': elementHandler
+    // });
+    
+    // console.log(document)
+    //  html2canvas(input)
+    //    .then((canvas) => {
+    //      const imgData = canvas.toDataURL('image/jpeg');
+    //      const pdf = new jsPDF("p", "mm", "a4");
+    //      var width = pdf.internal.pageSize.getWidth();
+    //      var height = pdf.internal.pageSize.getHeight()-10;
+    //      pdf.addImage(imgData, 'JPEG', 0, 0,width,height);
+    //      // pdf.output('dataurlnewwindow');
+    //      pdf.save("resume.pdf");
+    //    }).catch(function(error){
+    //      console.log(error)
+    //    })
+    
+    
+    // doc.output("dataurlnewwindow");
+  //   html2canvas(input).then(canvas => {
+  //     document.body.appendChild(canvas);  // if you want see your screenshot in body.
+  //     const imgData = canvas.toDataURL('image/png');
+  //     const pdf = new jsPDF();
+  //     pdf.addImage(imgData, 'PNG', 0, 0);
+  //     pdf.save("download.pdf"); 
+  // });
+
+    // console.log(page.className);
+  }
   let code=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentReducer?.skinCode}`;
   console.log(code) ;
 let skincd=`skin${props?.DocumentReducer?.skinCode===null?"1":props?.DocumentReducer?.skinCode} `;
   console.log(props);
   return (
       <div >
+        <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <h1>work Section</h1>
+        <button  onClick={()=>handleDownload()}         style={{border:"2px solid black", backgroundcolor:"red",height:"2rem",width:"7rem",margin:"0 0 0 1rem"}}
+ > Download</button>
+        <button         style={{border:"2px solid black", backgroundcolor:"red",height:"2rem",width:"7rem",margin:"0 0 0 1rem"}}
+ > Home</button>
+        </div>
     <div className={skincd+"outer-container"} >
       <div className={skincd+"container"} >
         <div className={skincd+"profiletext"}>

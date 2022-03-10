@@ -50,22 +50,22 @@ function Templates(props) {
     </div>
     <div className="sample-container">
         <div className="item">
-            <button href=""><img src={image1} alt="sample template cant be loaded"></img></button>
+            <button name="1" href=""  onClick={(e) => handleSelect(e)}><img src={image1} name="1" onClick={(e) => handleSelect(e) } alt="sample template cant be loaded"></img></button>
         </div>
-        <div className="item">
-            <button href=""><img src={image2} alt="sample template cant be loaded"></img></button>
+        <div  name="2" className="item">
+            <button href="" onClick={(e) => handleSelect(e)}><img src={image2} name="2" onClick={(e) => handleSelect(e) } alt="sample template cant be loaded"></img></button>
         </div>
-        <div className="item">
-            <button href=""><img src={image3} alt="sample template cant be loaded"></img></button>
+        <div  name="3" className="item">
+            <button href="" onClick={(e) => handleSelect(e)}><img src={image3} name="3" onClick={(e) => handleSelect(e) } alt="sample template cant be loaded"></img></button>
         </div>
-        <div className="item">
-            <button href=""><img src={image4} alt="sample template cant be loaded"></img></button>
+        <div name="4" className="item">
+            <button href="" onClick={(e) => handleSelect(e)}><img src={image4} name="4" onClick={(e) => handleSelect(e) } alt="sample template cant be loaded"></img></button>
         </div>
-        <div className="item">
-            <button href=""><img src={image5} alt="sample template cant be loaded"></img></button>
+        <div name="5" className="item">
+            <button href="" onClick={(e) => handleSelect(e)}><img src={image5} name="5" onClick={(e) => handleSelect(e) } alt="sample template cant be loaded"></img></button>
         </div>
-        <div className="item">
-            <button href=""><img src={image6} alt="sample template cant be loaded"></img></button>
+        <div name="6" className="item">
+            <button href="" onClick={(e) => handleSelect(e)}><img src={image6} name="6" onClick={(e) => handleSelect(e) } alt="sample template cant be loaded"></img></button>
         </div>
     </div>
 

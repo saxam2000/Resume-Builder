@@ -32,6 +32,7 @@ function App() {
 <Route path="/contact" exact component={Contact}></Route>
 <Route path="/education" exact component={Education}></Route>
 <Route exact path="/preview" component={SamplePreview}></Route>
+<Route exact path="/final" component={Preview}></Route>
 <Route exact path="/workhistory" component={WorkHistory}></Route>
 <Route exact path="/test" component={Firebasetest}></Route>
 <Route exact path="/Register" component={Register}></Route>
